@@ -22,3 +22,5 @@ a collection of solved problems and exercises
 * reverseSrtIterRecurs                              // переворот строки через вложенную рекурсию
 * reverseStr                                        // переворот строки через массив
 * substr                                            // получение подстроки по заданным параметрам
+* sumSquareDifference                               // ринимает аргумент n и возвращает разницу между квадратом суммы и суммой квадратов  
+                                                      первых n натуральных чисел.
