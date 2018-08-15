@@ -33,3 +33,4 @@ a collection of solved problems and exercises
                                                        аргументов
 * partialApply                                      // частичное применение по второму аргументу
 * logic                                             // каррирование. реализация конструкции IF через функции
+* numeralsCherch                                    // числа Черча
