@@ -32,6 +32,7 @@ a collection of solved problems and exercises
 * testArray                                         // сумма элементов двух масивов
 * testArrayRevers                                   // склеивание массивов с разворотом и push-em строки
 * testDateTime                                      // даты из строк. парсинг
+* testRegExp                                        // на конструктор RegExp
 * flip                                              // функция принимает на вход другую функцию и возвращает ее же изменив   
                                                        порядок аргументов
 * partialApply                                      // частичное применение по второму аргументу
