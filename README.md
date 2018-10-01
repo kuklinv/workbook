@@ -20,6 +20,7 @@ a collection of solved problems and exercises
                                                        раз
 * powerTree                                         // проверка на степень тройки
 * recursionFact                                     // факториал числа через рекурсию
+* recursionBase                                     // базовый случай рекурсии по интервалу чисел
 * reverseSrtIterRecurs                              // переворот строки через вложенную рекурсию
 * reverseStr                                        // переворот строки через массив
 * substr                                            // получение подстроки по заданным параметрам
