@@ -15,6 +15,7 @@ a collection of solved problems and exercises
 * invertCaseNew                                     // второй вариант замены регистра 
 * invertInt                                         // переворот числа
 * isLuckyTiket                                      // проверка числа (строки) на “счастливый билет”
+* isPrime                                           // проверка на простое число
 * isPolindrom                                       // проверка на полиндром
 * multiplicationOfCalls                             // реализация мультивызова функции заданное количество  
                                                        раз
