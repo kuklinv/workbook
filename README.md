@@ -17,6 +17,7 @@ a collection of solved problems and exercises
 * isLuckyTiket                                      // проверка числа (строки) на “счастливый билет”
 * isPrime                                           // проверка на простое число
 * isPolindrom                                       // проверка на полиндром
+* modules                                           // использование модулей// импорт экспорт
 * multiplicationOfCalls                             // реализация мультивызова функции заданное количество  
                                                        раз
 * powerTree                                         // проверка на степень тройки
