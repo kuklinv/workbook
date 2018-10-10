@@ -3,7 +3,7 @@ const reverse = (str) => {
   arrStrNum.reverse();
   const newStr = arrStrNum.join('');
   return newStr;
-};
+};:
 
 /*
 const reverseString = (str) => {
