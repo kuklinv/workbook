@@ -6,10 +6,14 @@
   а данные внутри элементов инвертировать не нужно!
 */
 function testArray(a, b) {
- var arr1 = a.split('');
- var arr2 = b.split('');
+ var astr = String(a);
+ var bstr = String(b);
+ var arr1 = astr.split('');
+ var arr2 = bstr.split('');
     arr1.reverse();
     arr2.reverse();
     var arr3 = arr2.concat(arr1);
     arr3.push("Иванов");
-};
+    var endstr = arr3.join('');
+    return endstr;
+}
