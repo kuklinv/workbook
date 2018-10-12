@@ -1,23 +1,7 @@
-const makeSegments = (point1, point2) => {
-    var x1 = car(point1);
-    var y1 = cdr(point1);
-    var x2 = car(point2);
-    var y2 = cdr(point2);
-    return cons(cons(x1, y1), cons(x2, y2));
-};
+const makeSegment = (point1, point2) => cons(point1, point2);
+const startSegment = (segment) => car(segment);
+const endSegment = (segment) => cdr(segment);
+const segmentToString = (segment) => '[' + pointToString(startSegment(segment)) + ', ' + pointToString(endSegment(segment)) + ']';
+const midpointSegment = (segment) => cons((car(startSegment(segment)) + car(endSegment(segment))) / 2, (cdr(startSegment(segment)) + cdr(endSegment(segment))) / 2);
 
-const startSegment = (segment) => {
-    return point1;
-};
-
-const endSegment = (segment) => {
-    return point2;
-};
-
-const segmentToString = (segment) => {
-    return pointToString;
-};
-
-const midpointSegment = (segment) = {
-    return point3;
-};
+export { makeSegment, startSegment, endSegment, segmentToString, midpointSegment };
