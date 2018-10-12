@@ -47,3 +47,4 @@ a collection of solved problems and exercises
 * pairs                                             // функции. работа с парами
 * logic                                             // каррирование. реализация конструкции IF через функции
 * numeralsCherch                                    // числа Черча
+* gcd1.sh                                           // bash script. greatest common divisor, GCD
