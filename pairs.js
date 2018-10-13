@@ -15,6 +15,14 @@ var y3 = y1 + y2;
 
 };
 
-const fondePrimitivBox = (box) => {
-isPair(box);
+const findPrimitiveBox = (box) => {
+  var x = car(box);
+  var y = cdr(box);
+  if(!isPair(x) && !isPair(y)) {
+     return box;
+  } else if (isPair(x)) {
+    return findPrimitiveBox(x);
+  } else {
+    return findPrimitiveBox(y);
+  }
 };

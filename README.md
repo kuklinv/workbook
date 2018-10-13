@@ -7,6 +7,7 @@ a collection of solved problems and exercises
                                                        через рекурсивное сравнение подстроки от средины
 * areBracketsBalancedCounter                        // реализация проверки баланса круглых скобок через счетчик
                                                        от начала к концу строки с поиском незакрытых
+* addDigitsRec                                      // сумма знаков числа. два варианта решения через массивы и строки и рекурсивно
 * callHtmlTable                                     // экспорт функции возвращающей html
 * dnaTorna                                          // преобразование цепочек символов по заданной матрице
 * goBigEachWord                                     // реализация  - каждое слово в предложении с большой 
@@ -30,6 +31,7 @@ a collection of solved problems and exercises
 * smallestDivisorImperativ                          // наименьший делитель через итеративный императивный процесс
 * sumSquareDifference                               // принимает аргумент n и возвращает разницу между квадратом суммы и  
                                                        суммой квадратов первых n натуральных чисел.
+* segments                                          // абстракции на отрезках. модуль - составные данные.
 * isPerfect                                         // принимает число и возвращает true, если оно совершенное, и false — в 
                                                        ином случае.
 * fizzBuzz                                          // классическая задачка на вывод по условиям
@@ -46,3 +48,4 @@ a collection of solved problems and exercises
 * pairs                                             // функции. работа с парами
 * logic                                             // каррирование. реализация конструкции IF через функции
 * numeralsCherch                                    // числа Черча
+* gcd1.sh                                           // bash script. greatest common divisor, GCD
