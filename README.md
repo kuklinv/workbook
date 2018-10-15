@@ -18,6 +18,7 @@ a collection of solved problems and exercises
 * isLuckyTiket                                      // проверка числа (строки) на “счастливый билет”
 * isPrime                                           // проверка на простое число
 * isPolindrom                                       // проверка на полиндром
+* isHappyNumber                                     // проверка на "счастливое число"
 * modules                                           // использование модулей// импорт экспорт
 * multiplicationOfCalls                             // реализация мультивызова функции заданное количество  
                                                        раз
