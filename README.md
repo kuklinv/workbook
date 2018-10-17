@@ -47,6 +47,8 @@ a collection of solved problems and exercises
 * partialApply                                      // частичное применение по второму аргументу
 * points                                            // функции. работа с координатами точек
 * pairs                                             // функции. работа с парами
+* rectangles                                        // функции. makeRectangle собственно говоря
 * logic                                             // каррирование. реализация конструкции IF через функции
 * numeralsCherch                                    // числа Черча
 * gcd1.sh                                           // bash script. greatest common divisor, GCD
+* withoutTwoZero                                    // задача на комбинаторику
