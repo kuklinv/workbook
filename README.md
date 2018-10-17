@@ -51,3 +51,4 @@ a collection of solved problems and exercises
 * logic                                             // каррирование. реализация конструкции IF через функции
 * numeralsCherch                                    // числа Черча
 * gcd1.sh                                           // bash script. greatest common divisor, GCD
+* withoutTwoZero                                    // задача на комбинаторику
