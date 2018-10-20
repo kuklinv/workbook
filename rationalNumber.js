@@ -12,12 +12,29 @@ const isEqual = (rat1, rat2) => {
 	} else return false;
 }; 
 
-const add = a/b + c/d = (a * d + b * c) / (b * d)
+const add = (rat1, rat2) => {
+	var a = ((numer(rat1) * denom(rat2)) + (denom(rat1) * numer(rat2)));
+	var b = (denom(rat1) * denom(rat2));
+	return make (a, b);
+};
 
-const sub = a/b - c/d = (a * d - b * c) / (b * d)
+const sub = (rat1, rat2) => {
+	var a = ((numer(rat1) * denom(rat2)) - (denom(rat1) * numer(rat2)));
+	var b = (denom(rat1) * denom(rat2));
+	return make (a, b);
+};
+//a/b - c/d = (a * d - b * c) / (b * d)
 
-const mul = a/b * c/d = (a * c) / (b * d)
+const mul = (rat1, rat2) => {
+  var a = (numer(rat1) * numer(rat2));
+  var b = (denom(rat1) * denom(rat2));
+  return make (a, b);
+};
 
-const div = a/b / c/d = (a * d) / (b * c)
+const div = (rat1, rat2) => {
+	var a = (numer(rat1) * denom(rat2));
+	var b = (denom(rat1) * numer(rat2));
+	return make (a, b);
+};
 
 export { make, numer, denom, toString, isEqual, add, sub, mul, div };
