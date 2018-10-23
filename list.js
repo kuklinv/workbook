@@ -18,7 +18,8 @@ concat(numbers, numbers2); // (3, 4, 5, 8, 3, 2, 9)
 const has = (numbers, num) => {
   if (isEmpty(numbers) === true) return false; // если список пуст
   while (numbers !== null) {                   // цикл перебираем список пока не найдем ноль в последней паре (элементе)
-    if (head(numbers) === num) return true;    // проверка головы очередного элемента
+  
+  if (head(numbers) === num) return true;    // проверка головы очередного элемента
 	numbers = tail(numbers);                   // перемещение по связи в следующий элемент
   }
   return false;
@@ -53,7 +54,8 @@ export { has, reverse, copy, concat };
 
 //  описание модулей задачи
 /* List constructor
-Parameters
+Pa:q
+rameters
 elements ...any
 Examples
 l(); // ()
