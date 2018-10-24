@@ -31,7 +31,8 @@ const reverse = (numbers) => {
     if (isEmpty(counter) === true) {
       return newList;
     }
-    return cons(newList, iter(head(counter)));
+  
+  return cons(newList, iter(head(counter)));
   }
   return iter (numbers, tail(numbers));
 };
