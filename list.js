@@ -18,8 +18,7 @@ concat(numbers, numbers2); // (3, 4, 5, 8, 3, 2, 9)
 const has = (numbers, num) => {
   if (isEmpty(numbers) === true) return false; // если список пуст
   while (numbers !== null) {                   // цикл перебираем список пока не найдем ноль в последней паре (элементе)
-  
-  if (head(numbers) === num) return true;    // проверка головы очередного элемента
+    if (head(numbers) === num) return true;    // проверка головы очередного элемента
 	numbers = tail(numbers);                   // перемещение по связи в следующий элемент
   }
   return false;
@@ -27,14 +26,14 @@ const has = (numbers, num) => {
 
 const reverse = (numbers) => {
   if (isEmpty(numbers) === true) return numbers;
-  const novaList = l();
-  function reversList (numbers, novaList) {
-    if (tail(numbers) === null) {
-      return novaList;
+  
+  const iter = (counter, newList) => {
+    if (isEmpty(counter) === true) {
+      return newList;
     }
-    return cons(novaList, reversList(tail(numbers)));
+    return cons(newList, iter(head(counter)));
   }
-  return reversList();
+  return iter (numbers, tail(numbers));
 };
 
 
@@ -54,8 +53,7 @@ export { has, reverse, copy, concat };
 
 //  описание модулей задачи
 /* List constructor
-Pa:q
-rameters
+Parameters
 elements ...any
 Examples
 l(); // ()
