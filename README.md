@@ -52,3 +52,4 @@ a collection of solved problems and exercises
 * numeralsCherch                                    // числа Черча
 * gcd1.sh                                           // bash script. greatest common divisor, GCD
 * withoutTwoZero                                    // задача на комбинаторику
+* htmlTags                                          // абстракция конструирующая HTML
