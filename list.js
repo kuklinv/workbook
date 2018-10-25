@@ -24,9 +24,9 @@ const has = (numbers, num) => {
   return false;
 };
 
-const reverse = (numbers) => {
-  if (isEmpty(numbers) === true) return numbers;
+const reverse = (list) => {
   
+<<<<<<< HEAD
   const iter = (counter, newList) => {
     if (isEmpty(counter) === true) {
       return newList;
@@ -34,25 +34,41 @@ const reverse = (numbers) => {
 }
   
   return cons(newList, iter(head(counter)));
+=======
+  const iter = (items, acc) => {
+    if (isEmpty(items) === true) {
+      return acc;
+    }
+    return iter(tail(items), cons(head(items), acc)); 
+>>>>>>> refs/remotes/origin/master
   }
-  return iter (numbers, tail(numbers));
+  return iter (list, l());
 };
 
+/* 
+Я вам подскажу. У вас есть список в качестве >параметра к reverse, 
+создаёте внутри функцию под >реализацию итеративного процесса, 
+применяете её к >этому списку и аккумулятору (пустой список). 
+Далее >создавайте новый список через объединение головы с >
+аккумулятором и возвращайте результат рекурсии с 
+>хвостом и новым списком. Вот и весь алгоритм.
 
-const copy = (numbers) => {
-
-};
+1) iter(tail(1,2,3,4), cons(head(1,2,3,4), l());
+2) iter(tail(2,3,4), cons(head(2,3,4), cons(head(1,2,3,4), l()));
+3) iter(tail(3,4), cons(head(3,4), cons(head(2,3,4), cons(head(1,2,3,4), l())));
+4) iter(tail(4), cons(head(4),  cons(head(3,4), cons(head(2,3,4), cons(head(1,2,3,4), l()))));
+*/
 
 const concat = (list1, list2) => {
-  if (isEmpty(tail(list2))) {
+  if (isEmpty(list1)) {
     return list2;
-  }
-  return cons(list1, cons(head(list2), concat(tail(list2))));
-} 
+  }  
+  return cons(head(list1), concat(tail(list1), list2));
+};
 
-export { has, reverse, copy, concat };
+export { has, reverse, concat };
 
-
+<<<<<<< HEAD
 //  описание модулей задачи
 /* List constructor
 Parameters
@@ -96,3 +112,5 @@ Examples
 toString(l()); // ()
 toString(l('hello', 'world')); // ('hello', 'world')
 */
+=======
+>>>>>>> refs/remotes/origin/master
