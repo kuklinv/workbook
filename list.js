@@ -24,73 +24,37 @@ const has = (numbers, num) => {
   return false;
 };
 
-const reverse = (numbers) => {
-  if (isEmpty(numbers) === true) return numbers;
+const reverse = (list) => {
   
-  const iter = (counter, newList) => {
-    if (isEmpty(counter) === true) {
-      return newList;
+  const iter = (items, acc) => {
+    if (isEmpty(items) === true) {
+      return acc;
     }
-  
-  return cons(newList, iter(head(counter)));
+    return iter(tail(items), cons(head(items), acc)); 
   }
-  return iter (numbers, tail(numbers));
+  return iter (list, l());
 };
 
+/* 
+Я вам подскажу. У вас есть список в качестве >параметра к reverse, 
+создаёте внутри функцию под >реализацию итеративного процесса, 
+применяете её к >этому списку и аккумулятору (пустой список). 
+Далее >создавайте новый список через объединение головы с >
+аккумулятором и возвращайте результат рекурсии с 
+>хвостом и новым списком. Вот и весь алгоритм.
 
-const copy = (numbers) => {
-
-};
+1) iter(tail(1,2,3,4), cons(head(1,2,3,4), l());
+2) iter(tail(2,3,4), cons(head(2,3,4), cons(head(1,2,3,4), l()));
+3) iter(tail(3,4), cons(head(3,4), cons(head(2,3,4), cons(head(1,2,3,4), l())));
+4) iter(tail(4), cons(head(4),  cons(head(3,4), cons(head(2,3,4), cons(head(1,2,3,4), l()))));
+*/
 
 const concat = (list1, list2) => {
-  if (isEmpty(tail(list2))) {
+  if (isEmpty(list1)) {
     return list2;
-  }
-  return cons(list1, cons(head(list2), concat(tail(list2))));
-} 
+  }  
+  return cons(head(list1), concat(tail(list1), list2));
+};
 
-export { has, reverse, copy, concat };
+export { has, reverse, concat };
 
-
-//  описание модулей задачи
-/* List constructor
-Parameters
-elements ...any
-Examples
-l(); // ()
-l(8, 10); // (8, 10)
-cons
-Add element to list
-Parameters
-element any
-list List
-Examples
-cons(5, l(1, 0)); // (5, 1, 0)
-head
-Get list's head
-Parameters
-list List
-Examples
-head(l(10, 15, 20)); // 10
-tail
-Get list's tail
-Parameters
-list List
-Examples
-tail(l(10, 15, 20)); // (15, 20)
-isEmpty
-Check if list is empty
-Parameters
-list List
-Examples
-isEmpty(l()); // true
-isEmpty(l(0)); // false
-isEmpty(l('a', 5)); // false
-toString
-Convert list to string
-Parameters
-list List
-Examples
-toString(l()); // ()
-toString(l('hello', 'world')); // ('hello', 'world')
-*/
