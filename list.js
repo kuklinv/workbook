@@ -30,7 +30,8 @@ const reverse = (numbers) => {
   const iter = (counter, newList) => {
     if (isEmpty(counter) === true) {
       return newList;
-    }
+
+}
   
   return cons(newList, iter(head(counter)));
   }
@@ -57,6 +58,7 @@ export { has, reverse, copy, concat };
 Parameters
 elements ...any
 Examples
+:q
 l(); // ()
 l(8, 10); // (8, 10)
 cons
