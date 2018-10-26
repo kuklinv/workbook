@@ -22,6 +22,7 @@ a collection of solved problems and exercises
 * modules                                           // использование модулей// импорт экспорт
 * multiplicationOfCalls                             // реализация мультивызова функции заданное количество  
                                                        раз
+* mapMirror                                         // абстракция на обьект map
 * powerTree                                         // проверка на степень тройки
 * recursionFact                                     // факториал числа через рекурсию
 * recursionBase                                     // базовый случай рекурсии по интервалу чисел
