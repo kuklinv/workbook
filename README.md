@@ -48,6 +48,7 @@ a collection of solved problems and exercises
 * partialApply                                      // частичное применение по второму аргументу
 * points                                            // функции. работа с координатами точек
 * pairs                                             // функции. работа с парами
+* pairWithoutFunction                               // реализация абстракции (контсруктор и селекторы) пар без функций
 * rectangles                                        // функции. makeRectangle собственно говоря
 * logic                                             // каррирование. реализация конструкции IF через функции
 * numeralsCherch                                    // числа Черча
