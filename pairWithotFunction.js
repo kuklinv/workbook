@@ -1,11 +1,13 @@
-export const cons = () => {
 
+const factor = (base, value) => {
+  if (value % base !== 0) {
+    return 0;
+  }
+  return 1 + factor(base, value / base);
 };
 
-export const car = () => {
+const cons = (a, b) => (2 ** a) * (3 ** b);
+const car = pair => factor(2, pair);
+const cdr = pair => factor(3, pair);
 
-};
-
-export const cdr = () => {
-
-};
+export { cons, car, cdr };
