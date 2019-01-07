@@ -19,5 +19,9 @@ function min(...arr) {
  // map, array and higher ordr functions:
 
  function businessNamesAndRatings (apiResult) {
-    return apiResult.map (function () rating name)
+    var nArr = apiResult.map(function(arr) {
+    	return arr.name, arr.rating;
+    });
+    return nArr;
+ //   return apiResult.map (function () rating name)
  }
