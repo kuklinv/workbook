@@ -17,7 +17,12 @@ function min(...arr) {
   }
  };
 
- // map, array and higher ordr functions:
+// map, array and higher ordr functions:
+
+  // 1.8 Studio Advanced Practis	№5.
+    //leverage Google's Places API in order 
+    //to get information about each place. Here's an example:
+    // https://pastebin.com/V1q31RAZ
 
  function businessNamesAndRatings (apiResult) {
     var nArr = apiResult.map(function(arr) {
