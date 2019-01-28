@@ -31,3 +31,5 @@ function min(...arr) {
     return nArr;
  //   return apiResult.map (function () rating name)
  }
+
+ 
