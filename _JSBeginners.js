@@ -43,3 +43,14 @@ function my_function(n) {
     return n>1?my_function(n-1)+" "+n:1;
 }
 my_function(5);
+
+// throw - > try -> catch -> finnaly.  example
+
+function testErrorFunc(a, func) {         
+ try  {func (a);}
+ catch (ex) {
+     return ex.name;
+ }    
+}
+
+//
