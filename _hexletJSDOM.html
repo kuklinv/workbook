@@ -12,10 +12,16 @@
    <div><p>2</p></div>
    
    <script>
-   const elements = search(document, 'p');
-   // ['<p>1</p>' '<p>2</p>'] где каждый элемент это объект соответствующего типа
-   console.log(elements.length); // 2
-
+    // ['<p>1</p>' '<p>2</p>'] где каждый элемент это объект соответствующего типа
+    const search = (document, tag) => {
+  const li = document.getElementByTagName('tag');
+  const htmls = li.map(function(){
+    return $(this).prop('outerHTML');
+  }).get();
+return htmls;
+};
+    
+// export default search;
    </script>
 </body>
 
