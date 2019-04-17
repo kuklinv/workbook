@@ -1,3 +1,4 @@
+/*
 const search = (document, tag) => {
   const elements = [];
     for (let index = 0; index < document.length; index++) {
@@ -14,7 +15,7 @@ console.log(elements.length);
 
 export default search;
 
-/*
+
 const search = (document, tag) => {
   const elements = document.documentElement.childNodes;
   elements.toString()
@@ -24,3 +25,20 @@ const search = (document, tag) => {
   });
 }
 */
+
+const search = (document, tag) => {
+  if (tag == 'html') {
+    return 
+  }
+  const elements = [...document.body.children]; // or var elements = Array.from(nodelist);
+  // ниже получение html кода элементов с содержимым в массив
+  //var htmls = elements.map(function(){
+  //  return $(this).prop('outerHTML');
+  //  }).get();
+  const selectHtmls = elements.filter(function(element) {
+     return element.tagName == tag;
+  });
+  return selectHtmls.length;
+};
+
+export default search;
