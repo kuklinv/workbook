@@ -27,18 +27,28 @@ const search = (document, tag) => {
 */
 
 const search = (document, tag) => {
-  if (tag == 'html') {
-    return 
-  }
   const elements = [...document.body.children]; // or var elements = Array.from(nodelist);
+  if (tag === 'html') {
+    return [document.documentElement];
+  }
+  if (tag === 'title') {
+    return [document.head.firstElementChild];
+  }
   // ниже получение html кода элементов с содержимым в массив
-  //var htmls = elements.map(function(){
+  // var htmls = elements.map(function(){
   //  return $(this).prop('outerHTML');
   //  }).get();
-  const selectHtmls = elements.filter(function(element) {
-     return element.tagName == tag;
+  const selectHtmls = elements.filter(function (element) {
+     return element.tagName === tag;
   });
   return selectHtmls.length;
 };
 
 export default search;
+
+search(document, 'html');
+search(document, 'td'); //(2);
+search(document, 'ul'); //(2);
+search(document, 'li'); //(4);
+search(document, 'div'); //2);
+search(document, 'title'); // ([document.head.firstElementChild]);
