@@ -55,3 +55,15 @@ a collection of solved problems and exercises
 * gcd1.sh                                           // bash script. greatest common divisor, GCD
 * withoutTwoZero                                    // задача на комбинаторику
 * htmlTags                                          // абстракция конструирующая HTML
+
+* IntroJS&React                      файлы по курсу Introdaction JS & React
+     в vario-js                         - два варианта js с нативными манипуляциями и вариант с использованием листенеров
+     в pyramid                          - JS все та же задача про пирамиду из mario но с добавлением jquery
+     pixwl-art-maker                    - JS задача по пиксельной рисовалке // пока пустой. если правильно помню на этом и закончил
+     postcard                           - JS animation with Jquery
+     shopping-cart                      - JS реализация корзины покупок с помощью Jquery 
+* Stepik Contest. JavaScript.js      JS упражнения из курса. набор в одном файле
+* CPP                                папка с учебными файлами по курсу С++
+    introCPP                           - C++ сборник задач имз курса Введение в программирование (C++)
+    chessBlank                         - заготовка для шахмат (логика), возможно для реализации в последствии на другом языке (JS?)
+
