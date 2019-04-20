@@ -24,12 +24,17 @@ function min(...arr) {
     //to get information about each place. Here's an example:
     // https://pastebin.com/V1q31RAZ
 
- function businessNamesAndRatings (apiResult) {
-    var nArr = apiResult.map(function(arr) {
-    	return arr.name, arr.rating;
+  function businessNamesAndRatings (apiResult) {                // выводит name, но не выодит raring
+    var newAr = apiResult.results.map(function (result) {
+      var propertyNameRaiting = 'raiting';
+      var propertyNameName = 'name';
+      var rait = result.rating;
+      var nam = result.name;
+      return rait, nam;
     });
-    return nArr;
- //   return apiResult.map (function () rating name)
- }
+  return newAr;
+  }
+
+console.log (businessNamesAndRatings (apiRes));
 
  
