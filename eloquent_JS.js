@@ -48,19 +48,83 @@ console.log(a1);
 console.log(a2);
 
 ///////////////////////////// list constructor
+/*
+*****************************************************
+Напишите функцию arrayToList, которая строит такую
+структуру, получая в качестве аргумента [1, 2, 3], а также
+функцию listToArray, которая создаёт массив из списка.
+Также напишите вспомогательную функцию prepend,
+которая получает элемент и создаёт новый список, где
+этот элемент добавлен спереди к первоначальному
+списку, и функцию nth, которая в качестве аргументов
+принимает список и число, а возвращает элемент на
+заданной позиции в списке или же undefined в случае
+отсутствия такого элемента.
+Если ваша версия nth не рекурсивна, тогда напишите её
+рекурсивную версию.
+
+console.log(arrayToList([10, 20]));
+// → {value: 10, rest: {value: 20, rest: null}}
+console.log(listToArray(arrayToList([10, 20, 30])));
+// → [10, 20, 30]
+console.log(prepend(10, prepend(20, null)));
+// → {value: 10, rest: {value: 20, rest: null}}
+console.log(nth(arrayToList([10, 20, 30]), 1));
+// → 20
+*/
+
+var array = [1, 2, 3]; // start array
+
+function lastList(lastFirst) { // constructor last listing
+    this.value = lastFirst;
+    this.link = null;
+};
+
+var testValue1 = array.pop();
+var test1 = new lastList(testValue1);
+//1
+console.log(test1);
+
+function prepend(one, link) { // add new value of list to last
+    this.value = one;
+    this.link = link;
+};
+
+var testValue2 = array.pop();
+var test2 = new prepend(testValue2, new lastList(testValue1));
+//2
+console.log(test2);
+
+var testValue3 = array.pop();
+var test3 = new prepend(testValue3, new prepend(test2, test1));
+console.log(test3);
+
+const constr = (first, second) => {
+    this.value = first;
+    this.link = second;
+};
+
+const arrayToList = (array) => {
+    var last = array[array.length - 2];
+    if (array.length == 1) {
+        return constr(array.pop(), null);
+    }
+    return constr(last, arrayToList(array.slice(0, last)));
+}
+
+var list = {};
+list = arrayToList(array);
+console.log(list);
+
+// new var
 
 var array = [1, 2, 3];
-const arrayToList = (array) => {
-  var constructor = new Object();
-    var list = {
-      first:'',
-      second:''
-  };
-  for (let index = 0; index < array.length; index++) {
-    var value = array.shift();
-    list.first = value;
-      
-  } 
+
+function arrayToList(array) {
+    if (array.length = 1) {
+        list.value = array[array.length - 1]
+        list.link = 'null';
+    }
+    var list = new Object(arrayToList(array.pop()));
     return list;
 }
-console.log(list);
