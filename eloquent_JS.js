@@ -47,14 +47,20 @@ const a2 = reversArrayInPlase(arr1);
 console.log(a1);
 console.log(a2);
 
-///////////////////////////// list
+///////////////////////////// list constructor
 
 var array = [1, 2, 3];
 const arrayToList = (array) => {
-    const obj = {};
-    for (let index = 0; index < array.length - 1; index++) {
-        obj.value = array[index];
-
-
-    }
+  var constructor = new Object();
+    var list = {
+      first:'',
+      second:''
+  };
+  for (let index = 0; index < array.length; index++) {
+    var value = array.shift();
+    list.first = value;
+      
+  } 
+    return list;
 }
+console.log(list);
