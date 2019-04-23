@@ -73,6 +73,52 @@ console.log(nth(arrayToList([10, 20, 30]), 1));
 // → 20
 */
 
+/*
+var array = [1,2,3];
+var temp = array.pop();
+function lastList (array) {
+  this.value = temp;
+  this.link = 'null'
+}
+
+var test = new lastList;
+console.log(test);
+*/
+/*  определение листа
+var list = { value: 1 };
+list.next = { value: 2 };
+list.next.next = { value: 3 };
+list.next.next.next = { value: 4 };
+console.log(list);
+*/
+//альтернативное определение листа:
+var list = {
+    value: 1,
+    next: {
+        value: 2,
+        next: {
+            value: 3,
+            next: {
+                value: 4,
+                next: null
+            }
+        }
+    }
+};
+console.log(list);
+// рекурсивная печать листа
+function printList(list) {
+
+    alert(list.value); // (1)
+
+    if (list.next) {
+        printList(list.next); // (2)
+    }
+
+}
+
+printList(list);
+//////////////////// основная задача далее
 var array = [1, 2, 3]; // start array
 
 function lastList(lastFirst) { // constructor last listing
@@ -97,13 +143,14 @@ console.log(test2);
 
 var testValue3 = array.pop();
 var test3 = new prepend(testValue3, new prepend(test2, test1));
+//3
 console.log(test3);
-
+/*
 const constr = (first, second) => {
     this.value = first;
     this.link = second;
 };
-
+  
 const arrayToList = (array) => {
     var last = array[array.length - 2];
     if (array.length == 1) {
@@ -111,20 +158,19 @@ const arrayToList = (array) => {
     }
     return constr(last, arrayToList(array.slice(0, last)));
 }
-
+  
 var list = {};
 list = arrayToList(array);
 console.log(list);
-
-// new var/////////////////////////////////////////////////////////////
-
+*/
+/*
 var array = [1, 2, 3];
-
-function arrayToList(array) {
-    if (array.length = 1) {
-        list.value = array[array.length - 1]
-        list.link = 'null';
-    }
-    var list = new Object(arrayToList(array.pop()));
-    return list;
-}
+function arrayToList (array) {
+  if (array.length = 1) {
+    list.value = array[array.length - 1]
+    list.link = 'null';
+    } 
+  var list = new Object(arrayToList(array.pop()));
+  return list;
+} 
+*/
