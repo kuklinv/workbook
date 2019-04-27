@@ -16,6 +16,23 @@ const smallestDivisor = (num) => {
 
 export default smallestDivisor;
 
+// императивная версия дивизора. без рекурсии, цикл и переменные
+
+const smallestDivisor = (num) => {
+    if (num < 1) {
+        return NaN;
+    }
+    if (num === 1) {
+        return num;
+    }
+    var smDivisor = 2;
+    while (smDivisor <= num) {
+        if (num % smDivisor === 0 || smDivisor === num) {
+            return smDivisor;
+        } else smDivisor += 1;
+    }
+};
+
 // предыдущая версия
 
 const smallestDivisor = (num) => {
@@ -35,20 +52,3 @@ const smallestDivisor = (num) => {
     return iter(num, 2);
 };
 smallestDivisor(15);
-
-// однако..... тут еще навороченнее. сейчас смотрю и кажетья малочитаемым.....неужели это я написал......
-
-const smallestDivisor = (num) => {
-    if (num < 1) {
-        return NaN;
-    }
-    if (num === 1) {
-        return num;
-    }
-    var smDivisor = 2;
-    while (smDivisor <= num) {
-        if (num % smDivisor === 0 || smDivisor === num) {
-            return smDivisor;
-        } else smDivisor += 1;
-    }
-};
