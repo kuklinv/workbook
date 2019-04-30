@@ -77,7 +77,7 @@ console.log(nth(arrayToList([10, 20, 30]), 1));
 // → 20
 */
 
-/*
+// создаю последнюю пару списка.... не лучший вариант...
 var array = [1,2,3];
 var temp = array.pop();
 function lastList (array) {
@@ -87,14 +87,14 @@ function lastList (array) {
 
 var test = new lastList;
 console.log(test);
-*/
-/*  определение листа
+
+//  определение листа/ хорошее представление для понимания
 var list = { value: 1 };
 list.next = { value: 2 };
 list.next.next = { value: 3 };
 list.next.next.next = { value: 4 };
 console.log(list);
-*/
+
 //альтернативное определение листа:
 var list = {
     value: 1,
@@ -122,7 +122,9 @@ function printList(list) {
 }
 
 printList(list);
-//////////////////// основная задача далее
+
+
+//////////////////// основные попытки далее
 var array = [1, 2, 3]; // start array
 
 function lastList(lastFirst) { // constructor last listing
@@ -149,7 +151,8 @@ var testValue3 = array.pop();
 var test3 = new prepend(testValue3, new prepend(test2, test1));
 //3
 console.log(test3);
-/*
+// дальше пробую создать конструктор с входом первого элемента и списком в качестве второго.
+// но это нельзя вызвать как конструктор, типа var n = new constr (); конструктор пишеться через function void;
 const constr = (first, second) => {
     this.value = first;
     this.link = second;
@@ -166,8 +169,8 @@ const arrayToList = (array) => {
 var list = {};
 list = arrayToList(array);
 console.log(list);
-*/
-/*
+
+// и еще попытка
 var array = [1, 2, 3];
 function arrayToList (array) {
   if (array.length = 1) {
@@ -177,4 +180,33 @@ function arrayToList (array) {
   var list = new Object(arrayToList(array.pop()));
   return list;
 } 
-*/
+
+// очередная идея. 24.04.19/ пишу функцию псевдо конструктор котоая возвращает обьект на основе входящего
+//первого аргумента и второго. первым передаю текущий первый в массиве индекс, второе - обрезанный без первого 
+//массив + 1, т.е. второго и третьего. это копия. исходный не должен по задумке измениться
+var testArray = [1, 2, 3, 4, 5, 6];
+// тот самый псевдо
+const listMaker = (first, second) => {
+    value: first;
+    link: second
+}
+
+function arrayToList (array) {
+  var list = {};
+  while (array.length > 2) {
+    var first = array[0];
+    var second = array.slice(1, 3);
+    list = listMaker (first, second);
+}
+return list;
+}
+console.log(arrayToList(testArray));
+
+// не срабатывает... циклиться на одном и том же вводе в листмейкер (т.е. внутри аррейтолист отрабатывает и выдает на вход нулевой и 
+// второй третий обрезанный, потом не доходит до записи в лист и идет снова к листмейкеру с теми же входными данными
+// истина гдето рядом.....)
+
+
+
+
+
