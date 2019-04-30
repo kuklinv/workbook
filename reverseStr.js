@@ -1,9 +1,9 @@
 const reverse = (str) => {
-  const arrStrNum = str.split('');
-  arrStrNum.reverse();
-  const newStr = arrStrNum.join('');
-  return newStr;
-};:
+    const arrStrNum = str.split('');
+    arrStrNum.reverse();
+    const newStr = arrStrNum.join('');
+    return newStr;
+};
 
 /*
 const reverseString = (str) => {
