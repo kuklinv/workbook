@@ -6,41 +6,54 @@ function calc(operbin, a, b) {
             return a + b;
             break;
         case '-':
-        return a - b;
+            return a - b;
             break;
         case '/':
-        return a / b;;
+            return a / b;;
             break;
         case '*':
-        return a * b;;
+            return a * b;;
             break;
         default:
-        return NaN;
+            return NaN;
     }
 }
 
 export default calc;
 
 // add Digits  - дает сумму числа пока число больше двух знаков.
-const sumDigits = (strOfNum) => {
-    let sumNum = 0;
-    for (let i = 0; i < length(strOfNum); i += 1) {
-      sumNum += Number(strOfNum[i]);
-    }
-    return sumNum;
-  };
-  
-  const addDigits = (num) => {
+const length = str => str.length;
+
+const addDigits = (num) => {
     let result;
-    if (length(String(num)) < 2) {
-      result = num;
-    }
     while (length(String(sumDigits(num))) > 1) {
-      result = sumDigits(num);
+        result = sumDigits(num);
     }
     return result;
-  };
-  
-  export default addDigits;
+};
 
-  
+const sumDigits = (num) => {
+    let sumNum = 0;
+    for (let i = 0; i < length(String(num)); i += 1) {
+        sumNum += num;
+    }
+    return sumNum;
+};
+addDigits(10);
+
+// реальное решение!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+const add = (num) => {
+    const numToStr = String(num);
+    let result = 0;
+    for (let i = 0; i < numToStr.length; i += 1) {
+        result += Number(numToStr[i]);
+    }
+    return result;
+};
+
+const addDigits = (num) => {
+    if (add(num) < 10) {
+        return add(num);
+    }
+    return addDigits(add(num));
+};
