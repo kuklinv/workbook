@@ -1,0 +1,1 @@
+{"index.js":"var myList = [];\nvar item = \"item\";\nvar prise = 10;\nfor (let i = 1; i <= 5; i += 1) {\nitem += 'i';\nprise += 5;\nmyList.push([item, prise]);\n}\n"}
