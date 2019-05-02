@@ -78,11 +78,12 @@ console.log(nth(arrayToList([10, 20, 30]), 1));
 */
 
 // создаю последнюю пару списка.... не лучший вариант...
-var array = [1,2,3];
+var array = [1, 2, 3];
 var temp = array.pop();
-function lastList (array) {
-  this.value = temp;
-  this.link = 'null'
+
+function lastList(array) {
+    this.value = temp;
+    this.link = 'null'
 }
 
 var test = new lastList;
@@ -157,7 +158,7 @@ const constr = (first, second) => {
     this.value = first;
     this.link = second;
 };
-  
+
 const arrayToList = (array) => {
     var last = array[array.length - 2];
     if (array.length == 1) {
@@ -165,21 +166,22 @@ const arrayToList = (array) => {
     }
     return constr(last, arrayToList(array.slice(0, last)));
 }
-  
+
 var list = {};
 list = arrayToList(array);
 console.log(list);
 
 // и еще попытка
 var array = [1, 2, 3];
-function arrayToList (array) {
-  if (array.length = 1) {
-    list.value = array[array.length - 1]
-    list.link = 'null';
-    } 
-  var list = new Object(arrayToList(array.pop()));
-  return list;
-} 
+
+function arrayToList(array) {
+    if (array.length = 1) {
+        list.value = array[array.length - 1]
+        list.link = 'null';
+    }
+    var list = new Object(arrayToList(array.pop()));
+    return list;
+}
 
 // очередная идея. 24.04.19/ пишу функцию псевдо конструктор котоая возвращает обьект на основе входящего
 //первого аргумента и второго. первым передаю текущий первый в массиве индекс, второе - обрезанный без первого 
@@ -191,14 +193,14 @@ const listMaker = (first, second) => {
     link: second
 }
 
-function arrayToList (array) {
-  var list = {};
-  while (array.length > 2) {
-    var first = array[0];
-    var second = array.slice(1, 3);
-    list = listMaker (first, second);
-}
-return list;
+function arrayToList(array) {
+    var list = {};
+    while (array.length > 2) {
+        var first = array[0];
+        var second = array.slice(1, 3);
+        list = listMaker(first, second);
+    }
+    return list;
 }
 console.log(arrayToList(testArray));
 
@@ -206,7 +208,6 @@ console.log(arrayToList(testArray));
 // второй третий обрезанный, потом не доходит до записи в лист и идет снова к листмейкеру с теми же входными данными
 // истина гдето рядом.....)
 
-
-
-
-
+// смотри ресурс:
+// https://dev.to/emmawedekind/creating-linked-lists-with-javascript-391e?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email
+// уверен тут есть ответ. очень хорошо про списки, подробно
