@@ -192,7 +192,24 @@ var collectionCopy = JSON.parse(JSON.stringify(collection));
 // если вэлью пустое удаляем данное проп свойство из альбома
 // использовать скобочный доступ
 function updateRecords (id, prop, value) {
-
+    if (prop == "tracks") {
+      if (collection[id].hasOwnProperty(prop)) {
+        collection[id][prop].push(value);
+      } else {
+        var newTrackArr = [];
+        collection[id][prop] = newTrackArr;
+        collection[id][prop].push(value);
+      }
+      }
+    if(value == "") {
+      delete collection[id][prop];
+    }
+    if (!collection[id].hasOwnProperty(prop)) {
+      collection[id][prop] = prop;
+      collection[id][prop][value] = value;
+      console.log(collection[id][prop]);
+      console.log(collection[id][prop][value]);
+    } 
 return collection;
 };
 
@@ -203,6 +220,9 @@ updateRecords(1245, "tracks", "Addicted to Love") // last element
 updateRecords(2468, "tracks", "Free") // 1999 - first element
 updateRecords(2548, "tracks", "") // not be set
 updateRecords(1245, "album", "Riptide") // album Riptide
+
+var output = JSON.stringify(collection, null, '\t');
+console.log(output);
 
 
 
