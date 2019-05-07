@@ -205,8 +205,7 @@ function updateRecords (id, prop, value) {
       delete collection[id][prop];
     }
     if (!collection[id].hasOwnProperty(prop)) {
-      collection[id][prop] = prop;
-      collection[id][prop][value] = value;
+      collection[id][prop] = value;
       console.log(collection[id][prop]);
       console.log(collection[id][prop][value]);
     } 
