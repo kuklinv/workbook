@@ -1,6 +1,6 @@
 // first part of Javascript Algorithms And Data Structures Certification (300 hours)
 // Using Objects for Lookups:
-/*
+
 function phoneticLookup(val) {
     var result = "";
 
@@ -14,7 +14,7 @@ function phoneticLookup(val) {
     };
 
     result = lookup.alpha(val); // ore result = lookup[val];
-    /* the same:
+    // the same:
     switch (val) {
         case "alpha":
             result = "Adams";
@@ -35,7 +35,7 @@ function phoneticLookup(val) {
             result = "Frank";
     }
 
-    
+
     return result;
 }
 phoneticLookup("charlie");
@@ -58,26 +58,27 @@ checkObj("gift");
 
 // golf game 
 var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
 function golfScore(par, strokes) {
-  // Only change code below this line
+    // Only change code below this line
     if (strokes == 1) {
-    return "Hole-in-one!";
-  } else if (strokes <= par - 2) {
-    return "Eagle";
-  } else if (strokes == par -1) {
-    return "Birdie";
-  } else if (strokes == par) {
-    return "Par";
-  } else if (strokes == par + 1) {
-    return "Bogey";
-  } else if (strokes == par + 2) {
-    return "Double Bogey";
-  } else if (strokes >= par + 3) {
-    return "Go Home!"
-  }
-  
-  return "Change Me";
-  // Only change code above this line
+        return "Hole-in-one!";
+    } else if (strokes <= par - 2) {
+        return "Eagle";
+    } else if (strokes == par - 1) {
+        return "Birdie";
+    } else if (strokes == par) {
+        return "Par";
+    } else if (strokes == par + 1) {
+        return "Bogey";
+    } else if (strokes == par + 2) {
+        return "Double Bogey";
+    } else if (strokes >= par + 3) {
+        return "Go Home!"
+    }
+
+    return "Change Me";
+    // Only change code above this line
 }
 
 // Change these values to test
@@ -89,63 +90,68 @@ golfScore(4, 4);
 var count = 0;
 
 function cc(card) {
-  // Only change code below this line
-  switch (card) {
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    count += 1; break;
-    case 10:
-    case 'J':
-    case 'Q':
-    case 'K':
-    case 'A':
-    count -= 1; break;
-  }
-  if (count <= 0) {
-    console.log (count +  " Hold\n");
-  } else {
-    console.log (count + " Bet\n");
-  }
-  return "Change Me";
-  // Only change code above this line
+    // Only change code below this line
+    switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count += 1;
+            break;
+        case 10:
+        case 'J':
+        case 'Q':
+        case 'K':
+        case 'A':
+            count -= 1;
+            break;
+    }
+    if (count <= 0) {
+        console.log(count + " Hold\n");
+    } else {
+        console.log(count + " Bet\n");
+    }
+    return "Change Me";
+    // Only change code above this line
 }
 
 // Add/remove calls to test your function.
 // Note: Only the last will display
-cc(2); cc(3); cc(7); cc('K'); cc('A');
+cc(2);
+cc(3);
+cc(7);
+cc('K');
+cc('A');
 
 
 // add records to object in array
-var myMusic = [
-  {
-    "artist": "Billy Joel",
-    "title": "Piano Man",
-    "release_year": 1973,
-    "formats": [ 
-      "CD",
-      "8T",
-      "LP"
-    ],
-    "gold": true
-  }
-  // Add record here
+var myMusic = [{
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "gold": true
+    }
+    // Add record here
 ];
 
-function addRec (array, artist, title, release_year, formats) {
-  var newRec = {
-    "artist": artist,
-    "title": title,
-    "release_year": release_year,
-    "formats": formats
-  };
-  array.push(newRec);
+function addRec(array, artist, title, release_year, formats) {
+    var newRec = {
+        "artist": artist,
+        "title": title,
+        "release_year": release_year,
+        "formats": formats
+    };
+    array.push(newRec);
 };
- 
 
-addRec (myMusic, "Cloe", "My life", 2003, ["CD", "DVD"]);
+
+addRec(myMusic, "Cloe", "My life", 2003, ["CD", "DVD"]);
 var output = JSON.stringify(myMusic, null, '\t');
 console.log(output);
 
@@ -225,60 +231,78 @@ console.log(output);
 // new task/ check profile
 // lookup in contact list
 //Setup
-var contacts = [
-  {
-      "firstName": "Akira",
-      "lastName": "Laine",
-      "number": "0543236543",
-      "likes": ["Pizza", "Coding", "Brownie Points"]
-  },
-  {
-      "firstName": "Harry",
-      "lastName": "Potter",
-      "number": "0994372684",
-      "likes": ["Hogwarts", "Magic", "Hagrid"]
-  },
-  {
-      "firstName": "Sherlock",
-      "lastName": "Holmes",
-      "number": "0487345643",
-      "likes": ["Intriguing Cases", "Violin"]
-  },
-  {
-      "firstName": "Kristian",
-      "lastName": "Vos",
-      "number": "unknown",
-      "likes": ["JavaScript", "Gaming", "Foxes"]
-  }
+var contacts = [{
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["JavaScript", "Gaming", "Foxes"]
+    }
 ];
 
 for (let i = 0; i < contacts.length; i += 1) {
-var output = JSON.stringify(contacts[i], null, '\t');
-console.log(output);
+    var output = JSON.stringify(contacts[i], null, '\t');
+    console.log(output);
 };
 
-function lookUpProfile(name, prop){
-for (let i = 0; i < contacts.length; i += 1) {
-  if (contacts[i]['firstName'] == name) {
-    if (contacts[i].hasOwnProperty(prop)) {
-    return contacts[i][prop];
-    } else {
-      return "No such property";
+function lookUpProfile(name, prop) {
+    for (let i = 0; i < contacts.length; i += 1) {
+        if (contacts[i]['firstName'] == name) {
+            if (contacts[i].hasOwnProperty(prop)) {
+                return contacts[i][prop];
+            } else {
+                return "No such property";
+            }
+        }
     }
-  }      
-}
-return "No such contact";
+    return "No such contact";
 }
 
 
 
 // Change these values to test your function
-lookUpProfile("Akira", "likes");  // array
+lookUpProfile("Akira", "likes"); // array
 lookUpProfile("Kristian", "lastName"); //Vos
 lookUpProfile("Sherlock", "likes"); //["Intriguing Cases", "Violin"]
-lookUpProfile("Harry","likes"); //"Hogwarts", "Magic", "Hagrid"
+lookUpProfile("Harry", "likes"); //"Hogwarts", "Magic", "Hagrid"
 lookUpProfile("Bob", "number"); //"No such contact"
 lookUpProfile("Bob", "potato"); //"No such contact"
 lookUpProfile("Akira", "address"); // No such property
-*/
+*
+/
 //new task
+//////////////Higher Order Arrow Functions
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+const squareList = (arr) => {
+    "use strict";
+    // change code below this line
+    const integersArray = arr.filter((member) => member % 1 == 0 && member > 0);
+    //console.log(integersArray);
+    const squared = integersArray.map((memberInt) => memberInt ** 2);
+    //console.log(squaredIntegers);
+    // change code above this line
+    //return squaredIntegers;
+    return squared;
+};
+// test your code
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
+////////////////////////////////////////////
+// new task
