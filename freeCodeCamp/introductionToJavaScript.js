@@ -148,34 +148,33 @@ function addRec (array, artist, title, release_year, formats) {
 addRec (myMusic, "Cloe", "My life", 2003, ["CD", "DVD"]);
 var output = JSON.stringify(myMusic, null, '\t');
 console.log(output);
-*/
-// new record addin function with check
+
 // 
 
 var collection = {
-"2548": {
-  "album": "Slyppery when Wet",
-  "artist": "Bon Jovi",
-  "tracks": [
-    "Let It Rock",
-    "You Give Love a Bad Name"
-  ]
-},
-"2468": {
-  "album": "1999",
-  "artist": "Prince",
-  "tracks": [
-    "1999",
-    "Little Red Corvette"
-  ]
-},
-"1245": {
-  "artist": "Robert Palmer",
-  "tracks": []
-},
-"5439": {
-  "album": "ABBA Gold"
-}
+    "2548": {
+        "album": "Slyppery when Wet",
+        "artist": "Bon Jovi",
+        "tracks": [
+            "Let It Rock",
+            "You Give Love a Bad Name"
+        ]
+    },
+    "2468": {
+        "album": "1999",
+        "artist": "Prince",
+        "tracks": [
+            "1999",
+            "Little Red Corvette"
+        ]
+    },
+    "1245": {
+        "artist": "Robert Palmer",
+        "tracks": []
+    },
+    "5439": {
+        "album": "ABBA Gold"
+    }
 };
 // keep a copy of collection for tests
 var collectionCopy = JSON.parse(JSON.stringify(collection));
@@ -191,25 +190,25 @@ var collectionCopy = JSON.parse(JSON.stringify(collection));
 // если проп - тракс и вэлью  - НЕ пустое  - пушим вэлью в конец альбома // существующих траков
 // если вэлью пустое удаляем данное проп свойство из альбома
 // использовать скобочный доступ
-function updateRecords (id, prop, value) {
+function updateRecords(id, prop, value) {
     if (prop == "tracks") {
-      if (collection[id].hasOwnProperty(prop)) {
-        collection[id][prop].push(value);
-      } else {
-        var newTrackArr = [];
-        collection[id][prop] = newTrackArr;
-        collection[id][prop].push(value);
-      }
-      }
-    if(value == "") {
-      delete collection[id][prop];
+        if (collection[id].hasOwnProperty(prop)) {
+            collection[id][prop].push(value);
+        } else {
+            var newTrackArr = [];
+            collection[id][prop] = newTrackArr;
+            collection[id][prop].push(value);
+        }
+    }
+    if (value == "") {
+        delete collection[id][prop];
     }
     if (!collection[id].hasOwnProperty(prop)) {
-      collection[id][prop] = value;
-      console.log(collection[id][prop]);
-      console.log(collection[id][prop][value]);
-    } 
-return collection;
+        collection[id][prop] = value;
+        console.log(collection[id][prop]);
+        console.log(collection[id][prop][value]);
+    }
+    return collection;
 };
 
 updateRecords(5439, "artist", "ABBA");
@@ -223,5 +222,63 @@ updateRecords(1245, "album", "Riptide") // album Riptide
 var output = JSON.stringify(collection, null, '\t');
 console.log(output);
 
+// new task/ check profile
+// lookup in contact list
+//Setup
+var contacts = [
+  {
+      "firstName": "Akira",
+      "lastName": "Laine",
+      "number": "0543236543",
+      "likes": ["Pizza", "Coding", "Brownie Points"]
+  },
+  {
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "number": "0994372684",
+      "likes": ["Hogwarts", "Magic", "Hagrid"]
+  },
+  {
+      "firstName": "Sherlock",
+      "lastName": "Holmes",
+      "number": "0487345643",
+      "likes": ["Intriguing Cases", "Violin"]
+  },
+  {
+      "firstName": "Kristian",
+      "lastName": "Vos",
+      "number": "unknown",
+      "likes": ["JavaScript", "Gaming", "Foxes"]
+  }
+];
+
+for (let i = 0; i < contacts.length; i += 1) {
+var output = JSON.stringify(contacts[i], null, '\t');
+console.log(output);
+};
+
+function lookUpProfile(name, prop){
+for (let i = 0; i < contacts.length; i += 1) {
+  if (contacts[i]['firstName'] == name) {
+    if (contacts[i].hasOwnProperty(prop)) {
+    return contacts[i][prop];
+    } else {
+      return "No such property";
+    }
+  }      
+}
+return "No such contact";
+}
 
 
+
+// Change these values to test your function
+lookUpProfile("Akira", "likes");  // array
+lookUpProfile("Kristian", "lastName"); //Vos
+lookUpProfile("Sherlock", "likes"); //["Intriguing Cases", "Violin"]
+lookUpProfile("Harry","likes"); //"Hogwarts", "Magic", "Hagrid"
+lookUpProfile("Bob", "number"); //"No such contact"
+lookUpProfile("Bob", "potato"); //"No such contact"
+lookUpProfile("Akira", "address"); // No such property
+*/
+//new task
