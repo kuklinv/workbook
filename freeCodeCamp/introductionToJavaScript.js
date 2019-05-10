@@ -1,5 +1,8 @@
 // first part of Javascript Algorithms And Data Structures Certification (300 hours)
-// Using Objects for Lookups:
+
+
+
+//////////////////////////////////////////////////////// Using Objects for Lookups:
 
 function phoneticLookup(val) {
     var result = "";
@@ -40,7 +43,7 @@ function phoneticLookup(val) {
 }
 phoneticLookup("charlie");
 
-//////////////////////////////////////////////// checkout proprty exist in obj; 
+///////////////////////////////////////////////////////// checkout proprty exist in obj; 
 // Setup
 var myObj = {
     gift: "pony",
@@ -56,7 +59,7 @@ function checkObj(checkProp) {
 checkObj("gift");
 
 
-// golf game 
+/////////////////////////////////////////////////////////////////// golf game 
 var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 
 function golfScore(par, strokes) {
@@ -85,7 +88,7 @@ function golfScore(par, strokes) {
 golfScore(4, 4);
 
 
-// card counter
+//////////////////////////////////////////////////////////////// card counter
 
 var count = 0;
 
@@ -125,7 +128,7 @@ cc('K');
 cc('A');
 
 
-// add records to object in array
+///////////////////////////////////////////////////// add records to object in array
 var myMusic = [{
         "artist": "Billy Joel",
         "title": "Piano Man",
@@ -155,7 +158,7 @@ addRec(myMusic, "Cloe", "My life", 2003, ["CD", "DVD"]);
 var output = JSON.stringify(myMusic, null, '\t');
 console.log(output);
 
-// 
+////////////////////////////////////////////////////////////modify collection
 
 var collection = {
     "2548": {
@@ -229,7 +232,7 @@ var output = JSON.stringify(collection, null, '\t');
 console.log(output);
 
 // new task/ check profile
-// lookup in contact list
+//////////////////////////////////////////////////////////////// lookup in contact list
 //Setup
 var contacts = [{
         "firstName": "Akira",
@@ -285,10 +288,8 @@ lookUpProfile("Harry", "likes"); //"Hogwarts", "Magic", "Hagrid"
 lookUpProfile("Bob", "number"); //"No such contact"
 lookUpProfile("Bob", "potato"); //"No such contact"
 lookUpProfile("Akira", "address"); // No such property
-*
-/
 //new task
-//////////////Higher Order Arrow Functions
+/////////////////////////////////////////////////////////Higher Order Arrow Functions
 const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
 const squareList = (arr) => {
     "use strict";
@@ -306,3 +307,89 @@ const squaredIntegers = squareList(realNumberArray);
 console.log(squaredIntegers);
 ////////////////////////////////////////////
 // new task
+////////////////////////////////////////////////////////// default function  parametr
+const defParam = (function() {
+    return function defParam(num, value = 1) {
+        return num + value;
+    }
+})();
+defParam(5, 1);
+/////////////////////////////////////////////////////////////  rest args function
+const sum = (function() {
+    "use strict";
+    return function sum(...args) {
+        const arg = [...args];
+        return arg.reduce((a, b) => a + b, 0);
+    };
+})();
+console.log(sum(1, 2, 3)); // 6
+///////////////////////////////////////////////////////////// spread operator/
+/////////////////////////////////////////////////////////////array copy
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+(function() {
+    "use strict";
+    arr2 = [...arr1]; // change this line
+})();
+console.log(arr2);
+/////////////////////////////////////////////////////////////distructing assignment
+const AVG_TEMPERATURES = {
+    today: 77.5,
+    tomorrow: 79
+};
+
+function getTempOfTmrw(avgTemperatures) {
+    "use strict";
+    // change code below this line
+    const { tomorrow: tempOfTomorrow } = avgTemperatures; // change this line
+    // change code above this line
+    return tempOfTomorrow;
+}
+
+console.log(getTempOfTmrw(AVG_TEMPERATURES)); // should be 79
+//////////////////////////////////////////////////////////// distructing assignment for nasted object
+const LOCAL_FORECAST = {
+    today: { min: 72, max: 83 },
+    tomorrow: { min: 73.3, max: 84.6 }
+};
+
+function getMaxOfTmrw(forecast) {
+    "use strict";
+    // change code below this line
+    const { tomorrow: { max: maxOfTomorrow } } = forecast; // change this line
+    // change code above this line
+    return maxOfTomorrow;
+}
+
+console.log(getMaxOfTmrw(LOCAL_FORECAST)); // should be 84.6
+///////////////////////////////////////////////////////its COOL!!!! destruction ES6 !!! change varisabes
+let a = 8,
+    b = 6;
+(() => {
+    [a, b] = [b, a];
+})();
+console.log(a); // should be 6
+console.log(b); // should be 8
+
+const [a, b] = [1, 2, 3, 4, 5, 6];
+console.log(a, b); // 1, 2
+
+const [a, b, , , c] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c); // 1, 2, 5
+//////////////////////////////////////////////////////Use Destructuring Assignment with the Rest Operator to Reassign Array Elements
+const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+console.log(a, b); // 1, 2
+console.log(arr); // [3, 4, 5, 7]
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function removeFirstTwo(list) {
+    "use strict";
+    // change code below this line
+    const [a, b, ...arr] = list; //                           !!!!  like arr.slice !!!!  
+    // change code above this line
+    return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr); // should be [3,4,5,6,7,8,9,10]
+console.log(source); // should be [1,2,3,4,5,6,7,8,9,10];
