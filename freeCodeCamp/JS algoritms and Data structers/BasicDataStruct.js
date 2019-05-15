@@ -19,4 +19,26 @@ let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
 let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
 // thatArray now equals ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']
 
-////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////// filtering array with "FOR"
+
+function filteredArray(arr, elem) {
+    let newArr = [...arr];
+    for (let i = 0; i < newArr.length; i += 1) {
+        for (let j = 0; j < newArr[i].length; j += 1) {
+            if (newArr[i][j] == elem) {
+                newArr[i].splice(j, 1);
+            }
+        }
+    }
+    return newArr;
+}
+
+filteredArray([
+    [10, 8, 3],
+    [14, 6, 23],
+    [3, 18, 6]
+], 18)
+
+// => [ [ 10, 8, 3 ], [ 14, 6, 23 ], [ 3, 6 ] ]
+
+//////////////////////////////////////////////////////////////////////
