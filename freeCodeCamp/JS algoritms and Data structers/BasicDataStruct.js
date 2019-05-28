@@ -82,3 +82,75 @@ let myNestedArray = [
 ];
 
 ///////////////////////////////////////////////
+
+//Iterate Through the Keys of an Object with a for...in Statement
+
+let users = {
+    Alan: {
+      age: 27,
+      online: false
+    },
+    Jeff: {
+      age: 32,
+      online: true
+    },
+    Sarah: {
+      age: 48,
+      online: false
+    },
+    Ryan: {
+      age: 19,
+      online: true
+    }
+  };
+  
+  function countOnline(obj) {
+    // change code below this line
+    let counter = 0;
+    for (let key in obj) {
+      if(obj[key]['online'] == true) {       // !!!!!! this a lot of minits requaire for understand
+        counter += 1;
+      }
+    }
+    return counter;
+    // change code above this line
+  }
+  
+  console.log(countOnline(users));
+
+  //////////////////////////////////
+
+/*
+Мы начали писать функцию addFriend. Завершите запись, 
+чтобы он взял объект пользователя и добавил имя аргумента друга в массив, 
+сохраненный в user.data.friends, и вернул этот массив.
+*/
+
+let user = {
+    name: 'Kenneth',
+    age: 28,
+    data: {
+      username: 'kennethCodesAllDay',
+      joinDate: 'March 26, 2016',
+      organization: 'freeCodeCamp',
+      friends: [
+        'Sam',
+        'Kira',
+        'Tomo'
+      ],
+      location: {
+        city: 'San Francisco',
+        state: 'CA',
+        country: 'USA'
+      }
+    }
+  };
+  
+  function addFriend(userObj, friend) {
+    // change code below this line  
+    userObj['data']['friends'].push(friend)
+    return userObj.data.friends;
+    // change code above this line
+  }
+  
+  console.log(addFriend(user, 'Pete'));
