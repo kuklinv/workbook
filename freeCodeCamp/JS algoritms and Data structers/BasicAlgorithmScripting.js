@@ -55,9 +55,96 @@ function largestOfFour(arr) {
 ///////////////////////
 //Confirm the Ending
 function confirmEnding(str, target) {
-  // "Never give up and good luck will find you."
-  // -- Falcor
-  return str;
+  return str.slice(str.length - target.length) == target;
 }
 
 confirmEnding("Bastian", "n");
+
+///////////Repeat a String Repeat a String
+
+function repeatStringNumTimes(str, num) {
+  return num > 0 ? str.repeat(num) : "";
+}
+
+repeatStringNumTimes("abc", 3);
+
+//// and variant else not use .repeat() method and if num < 0 return ' '
+
+function repeatStringNumTimes(str, num) {
+  let newStr = '';
+  if(num < 0) return newStr;
+  for (let i = 0; i <= num - 1; i += 1) {
+    newStr += str;
+  } 
+ return newStr;
+}
+
+
+repeatStringNumTimes("abc", 3);
+
+////////////////////////////
+//Truncate a String
+
+function truncateString(str, num) {
+return num >= str.length ? str : str.slice(0, num) + "...";
+}
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+/*
+truncateString("A-tisket a-tasket A green and yellow basket", 8) should return "A-tisket...".
+truncateString("Peter Piper picked a peck of pickled peppers", 11) should return "Peter Piper...".
+truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length) 
+should return "A-tisket a-tasket A green and yellow basket".
+truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) 
+should return "A-tisket a-tasket A green and yellow basket".
+truncateString("A-", 1) should return "A...".
+truncateString("Absolutely Longer", 2) should return "Ab...".
+*/
+
+///////////////////////////////////
+//Finders Keepers
+
+function findElement(arr, func) {
+  let filteredArr = arr.filter(func);
+  let num = filteredArr.reduce(function(a, b) {
+    return a * b;
+  }, 1);
+  return num;
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+// and if do this with loop, then:
+
+function findElement(arr, func) {
+  let num = 1;
+  for (let i = 0; i <= arr.length; i += 1)
+    if (func(arr[i])) {
+      num = num * arr[i];
+    }
+    if (num > 1) {
+      return num;
+    } else return underfined;
+}
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+//////////////////////////////////////
+/// chek boolean
+function booWho(bool) {
+  return typeof(bool) === "boolean" ? true : false;
+}
+
+booWho(null);
+///////////////////////////////////
+// Title Case a Sentence
+function titleCase(str) {
+  let copyStr = toLowerCase(str);
+  for (let i = 0; i <= str.length;) {
+    if (str[i] !== copyStr[i] && str[i - 1] == " " || str[i] !== copyStr[i] && i = 0 && ) {
+      toUpperCase(copyStr[i]);
+    }
+  }
+  return copyStr;
+}
+
+titleCase("I'm a little tea pot");
+//titleCase("I'M A LITTLE TEA POT");
+
