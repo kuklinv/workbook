@@ -72,11 +72,11 @@ repeatStringNumTimes("abc", 3);
 
 function repeatStringNumTimes(str, num) {
   let newStr = '';
-  if(num < 0) return newStr;
+  if (num < 0) return newStr;
   for (let i = 0; i <= num - 1; i += 1) {
     newStr += str;
-  } 
- return newStr;
+  }
+  return newStr;
 }
 
 
@@ -86,7 +86,7 @@ repeatStringNumTimes("abc", 3);
 //Truncate a String
 
 function truncateString(str, num) {
-return num >= str.length ? str : str.slice(0, num) + "...";
+  return num >= str.length ? str : str.slice(0, num) + "...";
 }
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
 /*
@@ -105,7 +105,7 @@ truncateString("Absolutely Longer", 2) should return "Ab...".
 
 function findElement(arr, func) {
   let filteredArr = arr.filter(func);
-  let num = filteredArr.reduce(function(a, b) {
+  let num = filteredArr.reduce(function (a, b) {
     return a * b;
   }, 1);
   return num;
@@ -121,30 +121,42 @@ function findElement(arr, func) {
     if (func(arr[i])) {
       num = num * arr[i];
     }
-    if (num > 1) {
-      return num;
-    } else return underfined;
+  if (num > 1) {
+    return num;
+  } else return underfined;
 }
 findElement([1, 2, 3, 4], num => num % 2 === 0);
 //////////////////////////////////////
 /// chek boolean
 function booWho(bool) {
-  return typeof(bool) === "boolean" ? true : false;
+  return typeof (bool) === "boolean" ? true : false;
 }
 
 booWho(null);
 ///////////////////////////////////
 // Title Case a Sentence
 function titleCase(str) {
-  let copyStr = toLowerCase(str);
-  for (let i = 0; i <= str.length;) {
-    if (str[i] !== copyStr[i] && str[i - 1] == " " || str[i] !== copyStr[i] && i = 0 && ) {
-      toUpperCase(copyStr[i]);
+  let copyStr = str.toLowerCase();
+  let resultStr = '';
+  for (let i = 0; i <= str.length - 1; i += 1) {
+  if (i == 0 || copyStr[i - 1] == " ") {
+  resultStr += copyStr[i].toUpperCase();
+    } else {
+      resultStr += copyStr[i];
     }
   }
-  return copyStr;
+  return resultStr;
 }
 
 titleCase("I'm a little tea pot");
-//titleCase("I'M A LITTLE TEA POT");
+//titleCase("sHoRt AnD sToUt")
+///////////////////////////////////////
+//Slice and Splice
+function frankenSplice(arr1, arr2, n) {
+  // It's alive. It's alive!
+  return arr2;
+}
 
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+///////////////////////////////
