@@ -154,9 +154,42 @@ titleCase("I'm a little tea pot");
 //Slice and Splice
 function frankenSplice(arr1, arr2, n) {
   // It's alive. It's alive!
-  return arr2;
+  let localArray = arr2.slice();
+  for (let i = 0; i < arr1.length; i++) {
+    localArray.splice(n, 0, arr1[i]);
+    n++;
+  }
+  return localArray;
 }
 
-frankenSplice([1, 2, 3], [4, 5, 6], 1);
+frankenSplice([1, 2, 3], [4, 5, 6], 1); // should return [4, 1, 2, 3, 5].
 
-///////////////////////////////
+///////////////////////////////Falsy Bouncer
+// Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+
+function bouncer(arr) {
+  let truArr = [];
+  for (let i = 0; i <= arr.length; i += 1) {
+    if(arr[i]) {
+      truArr.push(arr[i]);
+    }
+  }
+  return truArr;
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+/*
+bouncer([7, "ate", "", false, 9]) should return [7, "ate", 9].
+bouncer(["a", "b", "c"]) should return ["a", "b", "c"].
+bouncer([false, null, 0, NaN, undefined, ""]) should return [].
+bouncer([1, null, NaN, 2, undefined]) should return [1, 2].
+*/
+///////////////////////
+// Where do I Belong
+function getIndexToIns(arr, num) {
+  // Find my place in this sorted array.
+  return num;
+}
+
+getIndexToIns([40, 60], 50);
