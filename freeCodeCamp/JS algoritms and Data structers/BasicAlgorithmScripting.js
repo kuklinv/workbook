@@ -186,10 +186,34 @@ bouncer([false, null, 0, NaN, undefined, ""]) should return [].
 bouncer([1, null, NaN, 2, undefined]) should return [1, 2].
 */
 ///////////////////////
-// Where do I Belong
-function getIndexToIns(arr, num) {
-  // Find my place in this sorted array.
-  return num;
+// Where do I Belong//   // Find my place in this sorted array.
+function getIndexToIns(arrIn, num) {
+   let position;
+   if (arrIn.length == 0) {return 0;}
+   let arr = arrIn.sort(function(a,b) {
+    return a- b;
+   });
+   for (let i = 0; i <= arr.length - 1; i += 1) {
+     if (num > arr[i] && num < arr[i + 1]) {
+       return position =  i + 1;
+     } else if (num == arr[i] &&  num < arr[i + 1]){
+       return  position = i;
+     } else if (num > arr[i]) {
+       position = i + 1;
+     } else {
+       position = i;
+       } 
+   }
+  return position;
 }
 
 getIndexToIns([40, 60], 50);
+// getIndexToIns([10, 20, 30, 40, 50], 35) should return 3.
+//getIndexToIns([10, 20, 30, 40, 50], 30) should return 2.
+
+////////////////////////////////////////////////////////////// sort array with functional sentens
+var numbers = [4, 2, 5, 1, 3];
+numbers.sort(function(a, b) {
+  return a - b;
+});
+console.log(numbers); // [1, 2, 3, 4, 5]
