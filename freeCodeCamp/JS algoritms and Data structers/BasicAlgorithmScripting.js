@@ -139,8 +139,8 @@ function titleCase(str) {
   let copyStr = str.toLowerCase();
   let resultStr = '';
   for (let i = 0; i <= str.length - 1; i += 1) {
-  if (i == 0 || copyStr[i - 1] == " ") {
-  resultStr += copyStr[i].toUpperCase();
+    if (i == 0 || copyStr[i - 1] == " ") {
+      resultStr += copyStr[i].toUpperCase();
     } else {
       resultStr += copyStr[i];
     }
@@ -170,7 +170,7 @@ frankenSplice([1, 2, 3], [4, 5, 6], 1); // should return [4, 1, 2, 3, 5].
 function bouncer(arr) {
   let truArr = [];
   for (let i = 0; i <= arr.length; i += 1) {
-    if(arr[i]) {
+    if (arr[i]) {
       truArr.push(arr[i]);
     }
   }
@@ -186,10 +186,17 @@ bouncer([false, null, 0, NaN, undefined, ""]) should return [].
 bouncer([1, null, NaN, 2, undefined]) should return [1, 2].
 */
 ///////////////////////
-// Where do I Belong
-function getIndexToIns(arr, num) {
-  // Find my place in this sorted array.
-  return num;
+// Mutations
+function mutation(arr) {
+  let firstStr = arr[0].toLowerCase();
+  let secondStr = arr[1].toLowerCase();
+  let counter = 0;
+  for (let i = 0; i <= secondStr.length; i += 1) {
+    if (firstStr.indexOf(secondStr[i]) < 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
-getIndexToIns([40, 60], 50);
+mutation(["hello", "Hello"]); // true
