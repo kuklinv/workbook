@@ -191,16 +191,35 @@ function mutation(arr) {
   let firstStr = arr[0].toLowerCase();
   let secondStr = arr[1].toLowerCase();
   let counter = 0;
-  for (let i = 0; i <= secondStr.length; i += 1) {
+  for (let i = 0; i <= secondStr.length - 1; i += 1) {
     if (firstStr.indexOf(secondStr[i]) < 0) {
-      return false;
+      counter += 1;
+      console.log(counter);
     }
   }
-  return true;
+  return counter > 0 ? false : true;
 }
 
-mutation(["hello", "Hello"]); // true
+mutation(["hello", "Hello"]) // true
 
+///////////////////////////////////////////////////
+// Chunky Monkey
+function chunkArrayInGroups(arr, size) {
+  let newArr = [];
+  for (let i = 0; i <= arr.length; i += 1) {
+    let result = newArr.push()
+  }
+  return result;
+}
 
-// not complit!!!!!!!
-// 
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+/*
+chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3) should return [[0, 1, 2], [3, 4, 5], [6]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4) should return [[0, 1, 2, 3], [4, 5, 6, 7], [8]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2) should return [[0, 1], [2, 3], [4, 5], [6, 7], [8]].
+*/
