@@ -139,8 +139,8 @@ function titleCase(str) {
   let copyStr = str.toLowerCase();
   let resultStr = '';
   for (let i = 0; i <= str.length - 1; i += 1) {
-  if (i == 0 || copyStr[i - 1] == " ") {
-  resultStr += copyStr[i].toUpperCase();
+    if (i == 0 || copyStr[i - 1] == " ") {
+      resultStr += copyStr[i].toUpperCase();
     } else {
       resultStr += copyStr[i];
     }
@@ -170,7 +170,7 @@ frankenSplice([1, 2, 3], [4, 5, 6], 1); // should return [4, 1, 2, 3, 5].
 function bouncer(arr) {
   let truArr = [];
   for (let i = 0; i <= arr.length; i += 1) {
-    if(arr[i]) {
+    if (arr[i]) {
       truArr.push(arr[i]);
     }
   }
@@ -186,6 +186,7 @@ bouncer([false, null, 0, NaN, undefined, ""]) should return [].
 bouncer([1, null, NaN, 2, undefined]) should return [1, 2].
 */
 ///////////////////////
+
 // Where do I Belong//   // Find my place in this sorted array.
 function getIndexToIns(arrIn, num) {
    let position;
@@ -217,3 +218,42 @@ numbers.sort(function(a, b) {
   return a - b;
 });
 console.log(numbers); // [1, 2, 3, 4, 5]
+
+// Mutations         
+function mutation(arr) {
+  let firstStr = arr[0].toLowerCase();
+  let secondStr = arr[1].toLowerCase();
+  let counter = 0;
+  for (let i = 0; i <= secondStr.length - 1; i += 1) {
+    if (firstStr.indexOf(secondStr[i]) < 0) {
+      counter += 1;
+      console.log(counter);
+    }
+  }
+  return counter > 0 ? false : true;
+}
+
+mutation(["hello", "Hello"]) // true
+
+///////////////////////////////////////////////////
+// Chunky Monkey
+function chunkArrayInGroups(arr, size) {
+  let newArr = [];
+  for (let i = 0; i <= arr.length; i += 1) {
+    let result = newArr.push()
+  }
+  return result;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+/*
+chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3) should return [[0, 1, 2], [3, 4, 5], [6]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4) should return [[0, 1, 2, 3], [4, 5, 6, 7], [8]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2) should return [[0, 1], [2, 3], [4, 5], [6, 7], [8]].
+*/
+
