@@ -239,10 +239,10 @@ mutation(["hello", "Hello"]) // true
 // Chunky Monkey
 function chunkArrayInGroups(arr, size) {
   let newArr = [];
-  for (let i = 0; i <= arr.length; i += 1) {
-    let result = newArr.push()
+  while (arr.length > 0) {
+    newArr.push(arr.splice(0, size));
   }
-  return result;
+  return newArr;
 }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
