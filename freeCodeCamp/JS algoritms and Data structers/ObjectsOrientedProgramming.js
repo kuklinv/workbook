@@ -31,7 +31,7 @@ for (let property in beagle) {
 }
 ///////////////////////////////////////
 /// check constructor property
-function Dog () = {
+function Dog ()  {
   this.name;
   this.color;
 }
@@ -142,22 +142,88 @@ beagle.eat(); // Should print "nom nom nom"
 beagle.bark(); // Should print "Woof!"
 
 ////////////                                    Override Inherited Methods
-function Bird() { }
-
+function Bird() { };
 Bird.prototype.fly = function() { return "I am flying!"; };
-
 function Penguin() { }
 Penguin.prototype = Object.create(Bird.prototype);
 Penguin.prototype.constructor = Penguin;
-
-// Add your code below this line
-
 Penguin.prototype.fly = function () {
     return "Alas, this is a flightless bird.";
 }
-
-// Add your code above this line
-
 let penguin = new Penguin();
 console.log(penguin.fly);
 ///////
+/////////////////////////////////////// use MIXIN !!!
+let flyMixin = function(object) {
+    object.fly = function () {
+        return "I can fly!";
+    }
+} 
+
+let bird = {
+    name: "Donald",
+    numLegs: 2
+  };
+  
+  let plane = {
+    model: "777",
+    numPassengers: 524
+  };
+  
+  flyMixin(bird);
+  flyMixin(plane);
+
+////////////Use Closure to Protect Properties Within an Object from Being Modified Externally
+//
+function Bird() {
+    let weight = 15;                     // only LOCAL!!!
+    this.getWeight = function() {        // for access from anothet to get weight!
+      return weight;
+    }
+  }
+  let ducky = new Bird();
+ducky.getWeight(); // returns 15
+//////////////////     Understand the Immediately Invoked Function Expression (IIFE)
+////////////////////
+(function () {
+  console.log ("Чирп, щебет!");
+}) ();
+////////////////////       Use an IIFE to Create a Module
+//
+let motionModule = (function () {
+    return {
+      glideMixin: function (obj) {
+        obj.glide = function() {
+          console.log("Gliding on the water");
+        };
+      },
+      flyMixin: function(obj) {
+        obj.fly = function() {
+          console.log("Flying, wooosh!");
+        };
+      }
+    }
+  }) (); // The two parentheses cause the function to be immediately invoked
+
+  motionModule.glideMixin(duck);
+  duck.glide();
+  ///////////////////
+  let funModule = (function () {
+    return {
+      isCuteMixin: function(obj) {
+        obj.isCute = function() {
+          return true;
+        }
+      },
+      singMixin: function(obj) {
+        obj.sing = function() {
+          console.log("Singing to an awesome tune");
+        }
+      }
+    }
+  })();
+  /////////////////
+  /////////////////////
+  //its very cute for consentration one type metods to one place
+  
+
