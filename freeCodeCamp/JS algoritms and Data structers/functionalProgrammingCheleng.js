@@ -484,3 +484,31 @@ function nonMutatingSort(arr) {
 }
 nonMutatingSort(globalArray);
 ///////////////////////////////////////////////////
+
+
+//                                              urlSlug
+// the global variable
+var globalTitle = " Winter   Is    Coming";
+
+// Add your code below this line
+function urlSlug(title) {
+  let localVal = title;
+  let arr =  localVal.split(/[ +]/gm);                     // wtf with first "  ";
+  let copyArr = [];
+  arr.forEach(function(item) {
+    copyArr.push(item.toLowerCase());
+  });
+  return copyArr.filter(x => x !== undefined).join('-');
+}
+// Add your code above this line
+
+var winterComing = urlSlug(globalTitle); // Should be "winter-is-coming"
+console.log(winterComing);
+/*
+The globalTitle variable should not change.
+Your code should not use the replace method for this challenge.
+urlSlug("Winter Is Coming") should return "winter-is-coming".
+urlSlug(" Winter Is  Coming") should return "winter-is-coming".
+urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone") should return "a-mind-needs-books-like-a-sword-needs-a-whetstone".
+urlSlug("Hold The Door") should return "hold-the-door".
+*/
