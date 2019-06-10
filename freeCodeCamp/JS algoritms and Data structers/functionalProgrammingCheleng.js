@@ -445,18 +445,42 @@ var watchList = [
 ];
 
 // Add your code below this line
-
-const filteredList = watchList.filter((item) => item['Director'] = "Christopher Nolan");
-var averageRating;
+let watchListCOpy = [...watchList];
+const filteredList = watchListCOpy.filter((item) => item['Director'] = "Christopher Nolan");
 const mapFilteredList = filteredList.map((newItem) => ({"rating": newItem['imdbRating']}));
-//// dont work
-const redusedList = mapFilteredList.reduce(function(a, b) {
-    return parseInt(a) + parseInt(b);
-  });
+const redusedList = mapFilteredList.reduce(function(acc, value){
+  return acc + parseFloat(value['rating']);
+}, 0);
+let averageRating = (redusedList.toFixed(3) / (mapFilteredList.length));
 
-// Add your code above this line
+console.log(mapFilteredList);
+console.log(redusedList);
+console.log(averageRating.toFixed(3));
 
-console.log(averageRating);
+// and variant!!!!!!!!
+var averageRating = watchList.filter(x => x.Director === "Christopher Nolan").map(x => Number(x.imdbRating)).reduce((x1, x2) => x1 + x2) / watchList.filter(x => x.Director === "Christopher Nolan").length;
+
 /////////////////////////////////////////////////end this task
 //
 
+////////////////////////////////////////////////////// metod SORT
+function alphabeticalOrder(arr) {
+  // Add your code below this line
+  return arr.sort(function(a, b) {
+    return a > b;
+  });
+  // Add your code above this line
+}
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+
+//                                          sort with concat (for not mutation index array)
+var globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
+  // Add your code below this line
+  let localArr = [];
+  return arr.concat(localArr).sort((a, b) => a - b);
+  
+  // Add your code above this line
+}
+nonMutatingSort(globalArray);
+///////////////////////////////////////////////////
