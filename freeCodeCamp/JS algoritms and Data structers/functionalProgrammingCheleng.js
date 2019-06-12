@@ -498,7 +498,7 @@ function urlSlug(title) {
   arr.forEach(function(item) {
     copyArr.push(item.toLowerCase());
   });
-  return copyArr.filter(x => x !== undefined).join('-');
+  return copyArr.filter(x => x !== '').join('-');
 }
 // Add your code above this line
 
@@ -512,3 +512,43 @@ urlSlug(" Winter Is  Coming") should return "winter-is-coming".
 urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone") should return "a-mind-needs-books-like-a-sword-needs-a-whetstone".
 urlSlug("Hold The Door") should return "hold-the-door".
 */
+<<<<<<< HEAD
+=======
+
+///                                                  arr.every
+var numbers = [1, 5, 8, 0, 10, 11];
+numbers.every(function(currentValue) {
+  return currentValue < 10;
+});
+// Returns false
+/////////////////////////////////////////////
+function checkPositive(arr) {
+  // Add your code below this line
+ return arr.every(item => item > 0);
+  
+  // Add your code above this line
+}
+let val = checkPositive([1, 2, 3, -4, 5]);
+console.log(val);
+////////////////////////////////////////////////
+//                                                    curryng
+function add(x) {
+  return function(y) {
+    return function(z) {
+      return x + y + z;
+    }
+  }
+}
+add(10)(20)(30);  
+///
+// Call a curried function in parts:
+var funcForY = curried(1);
+console.log(funcForY(2)); // Prints 3
+//Impartial function
+function impartial(x, y, z) {
+  return x + y + z;
+}
+var partialFn = impartial.bind(this, 1, 2);
+partialFn(10); // Returns 13
+/////////////////////////////////////////////////////////////////////////////
+
