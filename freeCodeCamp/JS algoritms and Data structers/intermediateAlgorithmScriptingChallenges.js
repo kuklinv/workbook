@@ -18,6 +18,20 @@ function sumAll(arr) {
 
 sumAll([1, 4]);
 
+// нужно переписать. две функции : одна выбирает максимин , вторая суммирует через рекурсию. хотя как уже
+// сделано возмоджно и эффективнее но менее понятно и красиво.
+
+// например
+
+function sumAll(arr) {
+
+  function getMaxOfArray(numArray) {
+    return Math.max.apply(null, numArray);
+  }
+  
+  let max = getMaxOfArray(arr);
+}
+
 //                                                Diff Two Arrays
 /*
 Compare two arrays and return a new array with any items only found in one of the two given arrays, 
