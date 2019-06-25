@@ -8,6 +8,31 @@
 </head>
 
 <body>
+    <style>
+        .red-text {
+            color: red;
+        }
+
+        h2 {
+            font-family: Lobster, Monospace;
+        }
+
+        p {
+            font-size: 16px;
+            font-family: Monospace;
+        }
+
+        .thick-green-border {
+            border-color: green;
+            border-width: 10px;
+            border-style: solid;
+            border-radius: 50%;
+        }
+
+        .smaller-image {
+            width: 100px;
+        }
+    </style>
     <main>
         <div class="container-fluid">
             <h2 class="red-text text-center">CatPhotoApp</h2>
@@ -17,6 +42,9 @@
             <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat"
                     alt="A cute orange cat lying on its back."></a>
             <img class="img-responsive" src="https://bit.ly/fcc-running-cats">
+            <button class="btn btn-primary btn block">Like</button>
+            <button class="btn btn-block btn-info">Info</button>
+            <button class="btn btn-block btn-danger">Delete</button>
         </div>
     </main>
 </body>
