@@ -55,8 +55,38 @@ You have to use the arguments object.
 */
 
 function destroyer(arr) {
-  // Remove all the values
-  return arr;
+  let dataArr = arguments[0];
+  let argArr = [];
+  for (let i = 1; i <= arguments.length - 1; i += 1) {
+    argArr.push(arguments[i]);
+  }
+
+const filtered = (arr, arg) => arr.filter(item => item !== arg);
+
+for (let j = 0; j <= argArr.length - 1; j += 1) {
+  dataArr = filtered(dataArr, argArr[j]);  
+  console.log(dataArr);
+  }
+  return dataArr;
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+destroyer([2, 3, 2, 3], 2, 3); //should return []
+destroyer(["tree", "hamburger", 53], "tree", 53); // should return ["hamburger"]
+destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan"); // should return [12,92,65]
+
+////////////////////////////////////Wherefore art thou
+
+function whatIsInAName(collection, source) {
+  // What's in a name?
+  var arr = [];
+  // Only change code below this line
+  
+  
+  // Only change code above this line
+  return arr;
+}
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+
+///////////////////
