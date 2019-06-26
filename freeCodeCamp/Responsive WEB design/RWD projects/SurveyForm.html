@@ -8,6 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="Free Code Camp projects">
     <meta property="og.title" content="Survey Form Page for freeCodeCamp">
+    <!-- its bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <!-- its font awesom icons!-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+        integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,11 +34,20 @@
         header {
             background-color: bisque;
             display: flex;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
         }
 
         footer {
             background-color: bisque;
             display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            font-family: 'Lobster', monospace;
+            font-size: 45px;
         }
 
         #title {
@@ -41,7 +57,11 @@
 
         #description {}
 
-        #survey-form {}
+        #survey-form {
+            margin: 15px;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
 
         #name {}
 
@@ -60,12 +80,12 @@
         #submit {}
     </style>
     <header>
-        <h1 id="title">DevCod.pro survey form</h1>
+        <h1 id="title">Survey Form DevCod.pro</h1>
     </header>
     <main>
         <form id="survey-form" action="" method="">
             <div>
-                <p id="description">Let me know how i can improve devCod.pro</p>
+                <p id="description" class="text-center">Let me know how i can improve devCod.pro</p>
                 <label for="name" id="name-label">You name</label>
                 <input id="name" type="text" name="youName" placeholder="input you name"><br>
                 <label for="email" id="email-label">E-mail</label>
@@ -115,7 +135,8 @@
 
                     </textarea>
 
-                <button type="submit" id="submit">Submit</button>
+                <button class="btn btn-primary" type="submit" id="submit"><i
+                        class="fa fa-paper-plane"></i>Submit</button>
             </div>
         </form>
     </main>
