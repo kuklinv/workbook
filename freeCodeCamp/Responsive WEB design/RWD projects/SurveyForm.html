@@ -1,45 +1,107 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>Survey Form Page for Free Code Camp (FCC)</title>
-    <meta charset="utf-8">
-    <meta name="autor" content="Vitaly K">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="Free Code Camp projects">
-    <meta property="og.title" content="Survey Form Page for freeCodeCamp">
-</head>
-
-<body>
-    <style>
+    <head>
+        <title>Survey Form Page for Free Code Camp (FCC)</title>
+        <meta charset="utf-8">
+        <meta name="autor" content="Vitaly K">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="Free Code Camp projects">
+        <meta property="og.title" content="Survey Form Page for freeCodeCamp">
+    </head>
+    <body>
+        <style>
         header {
-            background-color: darkslategray;
-            color: aqua;
-            text-decoration-color: black;
-
-
         }
-
         footer {
-            background-color: darkslategray;
-            color: aqua;
-            text-decoration-color: black;
-
         }
-    </style>
-    <header>
-        <h1>Survey Form</h1>
-    </header>
+        #title {
+        }
+        #description {
+        }
+        #survey-form {
+        }
+        #name {
+        
+        }
+        #email {
+        }
+        #number {
+        }
+        #name-label {
+        }
+        #email-label {
+        }
+        #number-label {
+        }
+        #dropdown {
+        }
+        #submit {
+            
+        }
+        </style>
+        <header>
+            <h1 id="title">DevCod.pro survey form</h1>
+        </header>
+        <main>
+            <form id="survey-form" action="" method="">
+                <div>
+                    <p id="description">Let me know how i can improve devCod.pro</p>
+                    <label for="name" id="name-label">You name</label>
+                    <input id="name" type="text" name="youName" placeholder="input you name"><br>
+                    <label for="email" id="email-label">E-mail</label>
+                    <input id="email" type="email" name="email" placeholder="input you email@domen.domen"><br>
+                    <label for="number" id="number-label">You age</label>
+                    <input id="number" type="number" min="14" max="120" name="age" placeholder="You age must be 14 - 120 years"><br>
+                    <label for="occupation">Which option best describes your current role?</label>
+                    <select id="dropdown"  name="occupation" size="5">
+                        <option value="Student">Student</option>
+                        <option value="Developer">Developer</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <fieldset name="">
+                        <legend>##########</legend>
+                        <label for=""></label>
+                        <input type="radio" name=""><br>
+                        <label for=""></label>
+                        <input type="radio" name=""><br>
+                        <label for=""></label>
+                        <input type="radio" name=""><br>
+                    </fieldset>
+                    <select id="dropdown"  name="occupation" size="5">
+                        <option value="Student">Student</option>
+                        <option value="Developer">Developer</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <fieldset name="">
+                        <legend>##########</legend>
+                        <label for=""></label>
+                        <input type="checkbox" name="" value=""><br>
+                        <label for=""></label>
+                        <input type="checkbox" name="" value=""><br>
+                        <label for=""></label>
+                        <input type="checkbox" name="" value=""><br>
+                        <label for=""></label>
+                        <input type="checkbox" name="" value=""><br>
+                        <label for=""></label>
+                        <input type="checkbox" name="" value=""><br>
+                    </fieldset>
 
-    <main>
+                    <textarea>
+                        
+                    </textarea>
 
-    </main>
-
-    <footer>
-        <p>Copyright
-            <a id="tribute-link" href="http://devcod.pro/" target="_blank">devcod.pro</a>
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <p>Copyright
+                <a id="tribute-link" href="http://devcod.pro/" target="_blank">devcod.pro</a>
             Novosibirsk 05/2019</p>
-    </footer>
-</body>
-
+        </footer>
+    </body>
 </html>
