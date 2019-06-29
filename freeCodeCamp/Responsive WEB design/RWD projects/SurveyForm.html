@@ -43,6 +43,8 @@
             background-color: bisque;
             display: flex;
             justify-content: center;
+            font-family: 'Lobster', monospace;
+            font-size: 15px;
         }
 
         h1 {
@@ -80,71 +82,106 @@
         #submit {}
     </style>
     <header>
-        <h1 id="title">Survey Form DevCod.pro</h1>
+        <h1 id="title" class="text-primary">Survey Form DevCod.pro</h1>
     </header>
     <main>
-        <form id="survey-form" action="" method="">
-            <div>
-                <p id="description" class="text-center">Let me know how i can improve devCod.pro</p>
-                <label for="name" id="name-label">You name</label>
-                <input id="name" type="text" name="youName" placeholder="input you name"><br>
-                <label for="email" id="email-label">E-mail</label>
-                <input id="email" type="email" name="email" placeholder="input you email@domen.domen"><br>
-                <label for="number" id="number-label">You age</label>
-                <input id="number" type="number" min="14" max="120" name="age"
-                    placeholder="You age must be 14 - 120 years"><br>
-                <label for="occupation">Which option best describes your current role?</label>
-                <select id="dropdown" name="occupation" size="5">
-                    <option value="Student">Student</option>
-                    <option value="Developer">Developer</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <fieldset name="">
-                    <legend>##########</legend>
-                    <label for=""></label>
-                    <input type="radio" name=""><br>
-                    <label for=""></label>
-                    <input type="radio" name=""><br>
-                    <label for=""></label>
-                    <input type="radio" name=""><br>
-                </fieldset>
-                <select id="dropdown" name="occupation" size="5">
-                    <option value="Student">Student</option>
-                    <option value="Developer">Developer</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <fieldset name="">
-                    <legend>##########</legend>
-                    <label for=""></label>
-                    <input type="checkbox" name="" value=""><br>
-                    <label for=""></label>
-                    <input type="checkbox" name="" value=""><br>
-                    <label for=""></label>
-                    <input type="checkbox" name="" value=""><br>
-                    <label for=""></label>
-                    <input type="checkbox" name="" value=""><br>
-                    <label for=""></label>
-                    <input type="checkbox" name="" value=""><br>
-                </fieldset>
+        <div class="container-fluid">
+            <div class="wraper">
+                <form id="survey-form" action="" method="">
 
-                <textarea>
+                    <p id="description" class="text-center">Let me know how i can improve devCod.pro</p>
+
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <label for="name" id="name-label">You name</label>
+                        </div>
+                        <div class="col-xs-9">
+                            <input id="name" type="text" name="youName" placeholder="input you name"><br>
+                        </div>
+                        <div class="col-xs-3">
+                            <label for="email" id="email-label">E-mail</label>
+                        </div>
+                        <div class="col-xs-9">
+                            <input id="email" type="email" name="email" placeholder="input you email@domen.domen"><br>
+                        </div>
+                        <div class="col-xs-3">
+                            <label for="number" id="number-label">You age</label>
+                        </div>
+                        <div class="col-xs-9">
+                            <input id="number" type="number" min="14" max="120" name="age"
+                                placeholder="You age must be 14 - 120 years"><br>
+                        </div>
+                        <div class="col-xs-3">
+                            <label for="occupation">Which option best describes your current role?</label>
+                        </div>
+                        <div class="col-xs-9">
+                            <select id="dropdown" name="occupation" size="1" required>
+                                <option value="Student">Student</option>
+                                <option value="Developer">Developer</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <fieldset name="">
+                                <legend>##########</legend>
+                                <label for=""></label>
+                                <input type="radio" name=""><br>
+                                <label for=""></label>
+                                <input type="radio" name=""><br>
+                                <label for=""></label>
+                                <input type="radio" name=""><br>
+                            </fieldset>
+                        </div>
+                        <div class="col-xs-6">
+                            <select id="dropdown" name="occupation" size="1" required>
+                                <option value="Student">Student</option>
+                                <option value="Developer">Developer</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <fieldset name="">
+                                <legend>##########</legend>
+                                <label for=""></label>
+                                <input type="checkbox" name="" value=""><br>
+                                <label for=""></label>
+                                <input type="checkbox" name="" value=""><br>
+                                <label for=""></label>
+                                <input type="checkbox" name="" value=""><br>
+                                <label for=""></label>
+                                <input type="checkbox" name="" value=""><br>
+                                <label for=""></label>
+                                <input type="checkbox" name="" value=""><br>
+                            </fieldset>
+
+                            <textarea>
 
                     </textarea>
-
-                <button class="btn btn-primary" type="submit" id="submit"><i
-                        class="fa fa-paper-plane"></i>Submit</button>
+                        </div>
+                    </div>
             </div>
-        </form>
+        </div>
+        <button class="btn btn-primary" type="submit" id="submit"><i class="fa fa-paper-plane"></i>Submit</button>
+        </div>
+        </div>
     </main>
     <footer>
-        <p>Copyright
+        <p class="text-primary">Copyright
             <a id="tribute-link" href="http://devcod.pro/" target="_blank">devcod.pro</a>
-            Novosibirsk 05/2019</p>
+            Novosibirsk 07/2019</p>
     </footer>
+    </div>
+    </div>
 </body>
 
 </html>
