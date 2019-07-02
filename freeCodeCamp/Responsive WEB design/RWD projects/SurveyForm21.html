@@ -20,61 +20,63 @@
 <body>
     <style>
         body {
-            background-color: lightgray display: grid;
-            grid-template-rows: auto auto auto;
-            grid-template-columns: auto;
-            grid-template-areas:
-                "header"
-                "content"
-                "footer";
-            align-content: center;
-        }
+            background-color: lightgray;
 
+        }
+        .gridcontainer {
+            display: grid;
+            grid-template-columns: 100px 1fr 100px;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: 
+            "header header header"
+            " . form . "
+            "footer footer footer";
+        }
         .header {
             background-color: darkgray;
             display: flex;
-            height: 100px;
+            height: 60px;
             align-items: center;
             justify-content: center;
+            grid-area: header;
         }
 
         .footer {
             background-color: darkgrey;
             display: flex;
+            height: 30px;
             justify-content: center;
-            font-family: 'Lobster', monospace;
             font-size: 15px;
+            grid-area: footer;
         }
 
         #survey-form {
-            margin: 15px;
-            display: grid;
-            grid-template-rows: auto 1fr auto;
+            grid-area: form;
+            border-color: darkgrey;
+            border: 1px;
         }
+
+         #description {
+            font-family: 'Lobster', monospace;
+         }
     </style>
     <main>
-        <div class="container-fluid">
+        <div class="gridcontainer">
             <!-- header -->
-            <div class="row align-items-start header">
-                <div class="col-xs-12">
+            <div class="header">
                     <h1 id="title" class="text-primary text-center">Survey Form DevCod.pro</h1>
-                </div>
             </div>
             <!--center-->
-            <div class="row align-items-center">
                 <form id="survey-form" action="" method="">
-
-                </form>
-            </div>
+                  <p id="description" class="text-center">Let me know how i can improve devCod.pro</p>
+                </form>            
             <!-- footer -->
-            <div class="row align-items-end footer">
-                <div class="col-xs-12">
+            <div class="footer">
                     <p class="text-primary text-center">Copyright
                         <a id="tribute-link" href="http://devcod.pro/" target="_blank">devcod.pro</a>
                         Novosibirsk 07/2019</p>
-                </div>
             </div>
-        </div>
+          </div>
     </main>
 </body>
 
