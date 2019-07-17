@@ -79,28 +79,37 @@
 
 function whatIsInAName(collection, source) {
   var arr = [];
-  for (let i = 0; i < collection.lenght; i += 1) {
-    for (let collKey in collection[i]) {
-       console.log(collection[i][collKey]);
+  let sourKeyArr = Object.keys(source);
+  collection.forEach(function (collElem) {
+    for (let collKey in collElem) {
+      let keyCounter = 0;
+      for (let sourKey in source) {
+        if (source[sourKey] == collElem[collKey]) {
+          keyCounter += 1;
+          if (keyCounter == sourKeyArr.length) {
+            arr.push(collElem);
+          }
+        }
       }
     }
+  });
   return arr;
 }
 
 whatIsInAName([{
-  first: "Romeo",
-  last: "Montague"
-}, {
-  first: "Mercutio",
-  last: null
-}, {
-  first: "Tybalt",
-  last: "Capulet"
-}],
+    first: "Romeo",
+    last: "Montague"
+  }, {
+    first: "Mercutio",
+    last: null
+  }, {
+    first: "Tybalt",
+    last: "Capulet"
+  }],
 
-{
-  last: "Capulet"
-});
+  {
+    last: "Capulet"
+  });
 
 // whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }) should return [{ first: "Tybalt", last: "Capulet" }].
 // whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 }) should return [{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }].
