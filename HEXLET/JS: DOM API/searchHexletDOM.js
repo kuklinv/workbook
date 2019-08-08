@@ -1,13 +1,29 @@
 const elements = search(document, 'p');
-let result = [];
+console.log(elements.length); // 2
+export default search;
+
+// const document = document.documentElement;
 
 function search(document, tagName) {
-    let elts = document.body.childNodes;
-
-    return result;
+    let html = document.documentElement;
+    let result = [];
+    let elts = html.childNodes;
+    return findIter(elts, tagName, result);
 }
 
-console.log(elements.length); // 2
+function findIter(node, tag, arr) {
+    if (!node.childNodes) {
+        if (node.tagName === 'tag') {
+            arr.push(node.outerHTML);
+        }
+        return arr;
+    }
+    return findIter(node.childNodes, arr);
+}
+
+// return result;
+
+
 // export default search;
 
 // let result = [];
