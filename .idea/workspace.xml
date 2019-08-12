@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="291780a7-ebe7-42f5-b78c-6499e9d3b53f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HEXLET/JS: DOM API/_hexletJSDOM.html" beforeDir="false" afterPath="$PROJECT_DIR$/HEXLET/JS_DOM_API/_hexletJSDOM.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HEXLET/JS: DOM API/searchHexletDOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/HEXLET/JS_DOM_API/searchHexletDOM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HEXLET/JS: Sequences/HTML_CSS_JS/indexHexletJSDOM.html" beforeDir="false" afterPath="$PROJECT_DIR$/HEXLET/JS_Sequences/HTML_CSS_JS/indexHexletJSDOM.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HEXLET/JS: Sequences/HTML_CSS_JS/scriptHexletDOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/HEXLET/JS_Sequences/HTML_CSS_JS/scriptHexletDOM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HEXLET/JS: Sequences/downcaseFileNames.js" beforeDir="false" afterPath="$PROJECT_DIR$/HEXLET/JS_Sequences/downcaseFileNames.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HEXLET/JS: Sequences/jsTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/HEXLET/JS_Sequences/jsTree.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,22 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HEXLET/JS_DOM_API/_hexletJSDOM.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HEXLET/JS_DOM_API/searchHexletDOM.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,17 +56,6 @@
               <item name="workbook" type="b2602c69:ProjectViewProjectNode" />
               <item name="workbook" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="workbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workbook" type="462c0819:PsiDirectoryNode" />
-              <item name="HEXLET" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workbook" type="462c0819:PsiDirectoryNode" />
-              <item name="HEXLET" type="462c0819:PsiDirectoryNode" />
-              <item name="JS_DOM_API" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -125,16 +93,15 @@
       <updated>1564353924988</updated>
       <workItem from="1564353926267" duration="386000" />
       <workItem from="1565220309378" duration="2325000" />
-      <workItem from="1565264346617" duration="4767000" />
+      <workItem from="1565264346617" duration="5282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7478000" />
+    <option name="totallyTimeSpent" value="7993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="65" width="1398" height="781" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -205,15 +172,15 @@
     <entry file="file://$USER_HOME$/Downloads/hexletSearch.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/HEXLET/JS_DOM_API/_hexletJSDOM.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/HEXLET/JS_DOM_API/searchHexletDOM.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        <state relative-caret-position="284">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HEXLET/JS_DOM_API/_hexletJSDOM.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
