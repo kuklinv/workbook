@@ -22,8 +22,9 @@ function findIter(node, tag, arr) {
     // console.log(node.children);
     debugger
     if (node.children.length == 0) {
-        console.log(node.tagName);
-        if (node.tagName == 'tag') {
+        let nodeTag = node.tagName.toLowerCase()
+        console.log(nodeTag);
+        if (nodeTag == 'tag') {                         // TODO не понимаю. не входит в блок при равенстве. почему не понимаю
             let ok = node.outerHTML;
             console.log(ok)
             arr.push(ok);

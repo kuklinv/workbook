@@ -3,29 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="291780a7-ebe7-42f5-b78c-6499e9d3b53f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/HEXLET/JS_DOM_API/searchHexletDOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/HEXLET/JS_DOM_API/searchHexletDOM.js" afterDir="false" />
+>>>>>>> d2acf4b668c42868a797be7a70202b2b569247c7
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
+=======
+>>>>>>> d2acf4b668c42868a797be7a70202b2b569247c7
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/HEXLET/JS: DOM API/searchHexletDOM.js" />
-        <option value="$PROJECT_DIR$/HEXLET/JS_DOM_API/searchHexletDOM.js" />
-      </list>
-    </option>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -37,6 +33,7 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds">
     <option name="x" value="14" />
     <option name="y" value="65" />
@@ -62,6 +59,9 @@
       </pane>
     </panes>
   </component>
+=======
+  <component name="ProjectId" id="1PAg4MRh1pLEL1XRTCEbt6rp72L" />
+>>>>>>> d2acf4b668c42868a797be7a70202b2b569247c7
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -93,6 +93,7 @@
       <updated>1564353924988</updated>
       <workItem from="1564353926267" duration="386000" />
       <workItem from="1565220309378" duration="2325000" />
+<<<<<<< HEAD
       <workItem from="1565264346617" duration="5282000" />
     </task>
     <servers />
@@ -182,5 +183,25 @@
     <entry file="file://$PROJECT_DIR$/HEXLET/JS_DOM_API/_hexletJSDOM.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+=======
+      <workItem from="1565264346617" duration="4767000" />
+      <workItem from="1565322124667" duration="517000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+>>>>>>> d2acf4b668c42868a797be7a70202b2b569247c7
   </component>
 </project>
