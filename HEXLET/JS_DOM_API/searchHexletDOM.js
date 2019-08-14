@@ -1,27 +1,35 @@
-export default function search(doc, tagName){
-    var elem = doc;
-    var response = [];
-    arrCheck(Array.from(doc.children))
-    return response;
-    function arrCheck(arr) {
-        arr.forEach(el => {
-            if (el.tagName == tagName.toUpperCase()) {
-                response.push(el)
-            }
-            arrCheck(Array.from(el.children))
-        })
-    }
-}
-
- /// или
-
+let html = document.documentElement;
 const search = (doc, tag) => {
+    debugger;
     const coll = [...doc.children];
     const initAcc = coll.filter(e => e.tagName.toLowerCase() === tag);
     return coll.reduce((acc, child) => [...acc, ...search(child, tag)], initAcc);
 };
+// function search(doc, tagName){
+//     debugger;
+//     var elem = doc;
+//     var response = [];
+//     arrCheck(Array.from(doc.children));
+//     return response;
+//     function arrCheck(arr) {
+//         arr.forEach(el => {
+//             if (el.tagName == tagName.toUpperCase()) {
+//                 response.push(el)
+//             }
+//             arrCheck(Array.from(el.children))
+//         })
+//     }
+// }
+let target = search(html,'p');
+console.log(target);
+for (let i = 0; i < target.length; i += 1) {
+    console.log(target[i]);
+}
+ /// или
 
-export default search;
+
+
+
 
 
 
