@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="291780a7-ebe7-42f5-b78c-6499e9d3b53f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HEXLET/JS_DOM_API/_hexletJSDOM.html" beforeDir="false" afterPath="$PROJECT_DIR$/HEXLET/JS_DOM_API/_hexletJSDOM.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HEXLET/JS_DOM_API/searchHexletDOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/HEXLET/JS_DOM_API/searchHexletDOM.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JSRU/js280619" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -57,7 +58,8 @@
       <workItem from="1564353926267" duration="386000" />
       <workItem from="1565220309378" duration="2325000" />
       <workItem from="1565264346617" duration="4767000" />
-      <workItem from="1565322124667" duration="517000" />
+      <workItem from="1565322124667" duration="678000" />
+      <workItem from="1565763135211" duration="7108000" />
     </task>
     <servers />
   </component>
@@ -69,7 +71,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
