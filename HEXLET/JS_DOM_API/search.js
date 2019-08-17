@@ -20,21 +20,12 @@ const search = (doc, tag) => {
 //         })
 //     }
 // }
-let target = search(html,'p');
-console.log(target);
-for (let i = 0; i < target.length; i += 1) {
-    console.log(target[i]);
-}
+// let target = search(html,'p');
+// console.log(target);
+// for (let i = 0; i < target.length; i += 1) {
+//     console.log(target[i]);
+// }
  /// или
-
-
-
-
-
-
-
-
-
 
 // let html = document.documentElement.outerHTML;
 // search(html, 'p');

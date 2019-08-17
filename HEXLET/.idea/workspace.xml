@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ea0104d-636d-4ce0-b129-6b71caf857d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS_DOM_API/prettify.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS_DOM_API/prettify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_DOM_API/_hexletJSDOM.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS_DOM_API/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_DOM_API/searchHexletDOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_DOM_API/search.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,21 +19,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JS_DOM_API/_hexletJSDOM.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JS_DOM_API/prettify.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-50" />
+            <state relative-caret-position="360">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JS_DOM_API/searchHexletDOM.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JS_DOM_API/prettify.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-78" />
+            <state relative-caret-position="984">
+              <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+            </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -39,12 +55,16 @@
       <list>
         <option value="$PROJECT_DIR$/JS: DOM API/_hexletJSDOM.html" />
         <option value="$PROJECT_DIR$/JS: DOM API/searchHexletDOM.js" />
+        <option value="$PROJECT_DIR$/JS_DOM_API/search.html" />
+        <option value="$PROJECT_DIR$/JS_DOM_API/search.js" />
+        <option value="$PROJECT_DIR$/JS_DOM_API/prettify.js" />
+        <option value="$PROJECT_DIR$/JS_DOM_API/prettify.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="42" />
-    <option name="y" value="47" />
+    <option name="x" value="32" />
+    <option name="y" value="109" />
     <option name="width" value="1398" />
     <option name="height" value="781" />
   </component>
@@ -54,6 +74,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -70,11 +91,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -105,11 +126,12 @@
       <updated>1565184566635</updated>
       <workItem from="1565184567898" duration="3222000" />
       <workItem from="1565533389233" duration="366000" />
+      <workItem from="1566061320243" duration="321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3588000" />
+    <option name="totallyTimeSpent" value="3909000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -121,7 +143,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="42" y="47" width="1398" height="781" extended-state="0" />
+    <frame x="32" y="109" width="1398" height="781" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -148,14 +171,32 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/JS: DOM API/_hexletJSDOM.html" />
     <entry file="file://$PROJECT_DIR$/JS: DOM API/searchHexletDOM.js" />
-    <entry file="file://$PROJECT_DIR$/JS_DOM_API/_hexletJSDOM.html">
+    <entry file="file://$PROJECT_DIR$/JS_DOM_API/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50" />
+        <state relative-caret-position="432">
+          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS_DOM_API/searchHexletDOM.js">
+    <entry file="file://$PROJECT_DIR$/JS_DOM_API/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-78" />
+        <state relative-caret-position="816">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS_DOM_API/prettify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="984">
+          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS_DOM_API/prettify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
       </provider>
     </entry>
   </component>
