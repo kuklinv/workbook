@@ -9,11 +9,14 @@ function prettify(doc) {
         let p = document.createElement('p');
         let text = targetDiv[i].textContent.trim();
         p.innerHTML = text;
-        // targetDiv[i].replaceChild(p, targetDiv[i].childNodes[0]);
-        targetDiv[i].childNodes[0].replaceWith(p);
+        targetDiv[i].replaceChild(p, targetDiv[i].childNodes[0]);
+        // targetDiv[i].childNodes[0].replaceWith(p);
+        // doc.appendChild()
     }
+    return document.body.innerHTML;
 }
 const elements = prettify(doc);
+// doc.innerHTML = elements;
 console.log(document.body.innerHTML);
 
 
