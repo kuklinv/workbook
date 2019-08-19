@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ea0104d-636d-4ce0-b129-6b71caf857d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JS_DOM_API/prettify.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS_DOM_API/prettify.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS_DOM_API/_hexletJSDOM.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS_DOM_API/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS_DOM_API/searchHexletDOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_DOM_API/search.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,15 +20,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
               <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JS_DOM_API/prettify.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="984">
-              <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -63,8 +50,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="32" />
-    <option name="y" value="109" />
+    <option name="x" value="29" />
+    <option name="y" value="53" />
     <option name="width" value="1398" />
     <option name="height" value="781" />
   </component>
@@ -126,12 +113,13 @@
       <updated>1565184566635</updated>
       <workItem from="1565184567898" duration="3222000" />
       <workItem from="1565533389233" duration="366000" />
-      <workItem from="1566061320243" duration="321000" />
+      <workItem from="1566061320243" duration="391000" />
+      <workItem from="1566094122300" duration="232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3909000" />
+    <option name="totallyTimeSpent" value="4211000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -143,7 +131,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="32" y="109" width="1398" height="781" extended-state="0" />
+    <frame x="29" y="53" width="1398" height="781" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963716" />
@@ -191,6 +179,9 @@
           <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS_Sequences/jsTree.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/JS_DOM_API/prettify.html">
       <provider selected="true" editor-type-id="text-editor">
