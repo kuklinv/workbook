@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a06fe9d6-69b5-4d73-b8f6-7183c88f7086" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../HEXLET/JS_Collection/filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HEXLET/JS_Collection/indexForDebag.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/JS algoritms and Data structers.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HEXLET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HEXLET/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -89,12 +86,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566229022895</updated>
-      <workItem from="1566229024045" duration="601000" />
+      <workItem from="1566229024045" duration="641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="601000" />
+    <option name="totallyTimeSpent" value="641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="106" y="57" width="1398" height="781" extended-state="0" />
