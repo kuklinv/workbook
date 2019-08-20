@@ -2,10 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ea0104d-636d-4ce0-b129-6b71caf857d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JS_Collection/filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS_Collection/indexForDebag.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../freeCodeCamp/JS algoritms and Data structers/.idea/JS algoritms and Data structers.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS_Collection/wordsCount.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Collection/filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Collection/filter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Collection/indexForDebag.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Collection/indexForDebag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_numeralsCherch.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/_numeralsCherch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ackermann.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/ackermann.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addDigitsRec.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/addDigitsRec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/areBracketsBalanced.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/areBracketsBalanced.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/areBracketsBalancedCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/areBracketsBalancedCounter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basicCoding.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/basicCoding.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/callHtmlTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/callHtmlTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/closure_simpl_ex.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/closure_simpl_ex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dnaTorna.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/dnaTorna.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finalGrade.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/finalGrade.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzBuzz.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/fizzBuzz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flip.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/flip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formattedTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/formattedTime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goBigEachWord.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/goBigEachWord.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlTags.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/htmlTags.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlTags2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/htmlTags2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invertCase.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/invertCase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invertCaseNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/invertCaseNew.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invertInt.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/invertInt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/isHappyNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/isHappyNumber.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/isLuckyTiket.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/isLuckyTiket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/isPerfect.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/isPerfect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/isPolindrom.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/isPolindrom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/isPrime.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/isPrime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/logic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapMirror.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/mapMirror.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/modules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multiplicationOfCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/multiplicationOfCalls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pairWithoutFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/pairWithoutFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pairs.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/pairs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partialApply.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/partialApply.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/points.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/points.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/powerTree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rationalNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/rationalNumber.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rectangles.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/rectangles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursionBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/recursionBase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursionFact.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/recursionFact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reverseSrtIterRecurs.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/reverseSrtIterRecurs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reverseStr.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/reverseStr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/segments.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/segments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smallestDivisor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/smallestDivisor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sumSquareDifference.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/sumSquareDifference.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/withoutTwoZeros.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/withoutTwoZeros.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,16 +66,16 @@
         <entry file="file://$PROJECT_DIR$/JS_Collection/indexForDebag.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
-              <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JS_Collection/filter.js">
+        <entry file="file://$PROJECT_DIR$/JS_Collection/wordsCount.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="59" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
+            <state relative-caret-position="240">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -58,9 +102,10 @@
         <option value="$PROJECT_DIR$/JS_DOM_API/search.js" />
         <option value="$PROJECT_DIR$/JS_DOM_API/prettify.js" />
         <option value="$PROJECT_DIR$/JS_DOM_API/prettify.html" />
-        <option value="$PROJECT_DIR$/JS_Collection/indexForDebag.html" />
         <option value="$PROJECT_DIR$/JS_Collection/deletAlldublItemInArr.js" />
         <option value="$PROJECT_DIR$/JS_Collection/filter.js" />
+        <option value="$PROJECT_DIR$/JS_Collection/indexForDebag.html" />
+        <option value="$PROJECT_DIR$/JS_Collection/wordsCount.js" />
       </list>
     </option>
   </component>
@@ -105,6 +150,9 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Other" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../../mySnippets/Collection" />
     </key>
@@ -135,12 +183,12 @@
       <workItem from="1565533389233" duration="366000" />
       <workItem from="1566061320243" duration="391000" />
       <workItem from="1566094122300" duration="232000" />
-      <workItem from="1566228358989" duration="3939000" />
+      <workItem from="1566228358989" duration="5807000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8150000" />
+    <option name="totallyTimeSpent" value="10018000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -152,7 +200,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="29" y="53" width="1398" height="781" extended-state="0" />
+    <frame x="31" y="55" width="1398" height="781" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963716" />
@@ -211,13 +259,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS_Collection/indexForDebag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JS_Collection/deletAlldublItemInArr.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -227,8 +268,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JS_Collection/filter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="59" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
+        <state relative-caret-position="720">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS_Collection/indexForDebag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS_Collection/wordsCount.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
