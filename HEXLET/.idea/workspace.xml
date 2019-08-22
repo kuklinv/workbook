@@ -1,56 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ea0104d-636d-4ce0-b129-6b71caf857d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JS_Collection/wordsCount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS_Collection/filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Collection/filter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS_Collection/indexForDebag.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Collection/indexForDebag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_numeralsCherch.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/_numeralsCherch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ackermann.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/ackermann.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addDigitsRec.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/addDigitsRec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/areBracketsBalanced.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/areBracketsBalanced.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/areBracketsBalancedCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/areBracketsBalancedCounter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basicCoding.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/basicCoding.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/callHtmlTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/callHtmlTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closure_simpl_ex.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/closure_simpl_ex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dnaTorna.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/dnaTorna.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finalGrade.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/finalGrade.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fizzBuzz.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/fizzBuzz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flip.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/flip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formattedTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/formattedTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goBigEachWord.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/goBigEachWord.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlTags.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/htmlTags.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlTags2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/htmlTags2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invertCase.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/invertCase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invertCaseNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/invertCaseNew.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invertInt.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/invertInt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/isHappyNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/isHappyNumber.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/isLuckyTiket.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/isLuckyTiket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/isPerfect.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/isPerfect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/isPolindrom.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/isPolindrom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/isPrime.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/isPrime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/logic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapMirror.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/mapMirror.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/modules.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multiplicationOfCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/multiplicationOfCalls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pairWithoutFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/pairWithoutFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pairs.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/pairs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partialApply.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/partialApply.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/points.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/points.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/powerTree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rationalNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/rationalNumber.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rectangles.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/rectangles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recursionBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/recursionBase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recursionFact.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/recursionFact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reverseSrtIterRecurs.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/reverseSrtIterRecurs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reverseStr.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/reverseStr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segments.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/segments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smallestDivisor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/smallestDivisor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sumSquareDifference.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/sumSquareDifference.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/withoutTwoZeros.js" beforeDir="false" afterPath="$PROJECT_DIR$/Other/withoutTwoZeros.js" afterDir="false" />
-    </list>
+    <list default="true" id="1ea0104d-636d-4ce0-b129-6b71caf857d3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -183,12 +134,12 @@
       <workItem from="1565533389233" duration="366000" />
       <workItem from="1566061320243" duration="391000" />
       <workItem from="1566094122300" duration="232000" />
-      <workItem from="1566228358989" duration="5807000" />
+      <workItem from="1566228358989" duration="5867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10018000" />
+    <option name="totallyTimeSpent" value="10078000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -203,7 +154,7 @@
     <frame x="31" y="55" width="1398" height="781" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963716" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />

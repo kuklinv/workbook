@@ -14,13 +14,15 @@ function wordsCount(arr1, arr2) {
         tempArr = [...cleanArr];
     }
     console.log(cleanArr);
-    console.log(tempArr);
+    let temp = [...cleanArr];
+    console.log(temp);
     for (let i = 0; i < cleanArr.length; i += 1) {
         let counter = 0;
-        for (let j = 0; j < tempArr.length; j += 1) {                           // TODO потерялся tempArr
-            if (cleanArr[i].toLowerCase() === tempArr[j].toLowerCase()) {
+        for (let j = 0; j < temp.length; j += 1) {                           // TODO потерялся tempArr
+            if (cleanArr[i].toLowerCase() == temp[j].toLowerCase()) {
                 counter ++;
-                delete tempArr[j];
+                // delete temp[j];
+                temp.splice(j,1);
             }
         }
         mapped.set(cleanArr[i], counter);
