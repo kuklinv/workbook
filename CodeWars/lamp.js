@@ -4,7 +4,7 @@ class Lamp {
         this.on = false;
     }
     set color (color) {
-        return this.color = color;
+        this.color = color;
     }
     get color () {
         return this.color;
