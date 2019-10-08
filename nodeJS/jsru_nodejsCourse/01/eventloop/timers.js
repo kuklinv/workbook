@@ -3,9 +3,9 @@ const fs = require('fs');
 // eventloop
 // V8 (JS VM) + libUV (fs, network)
 
-// (macro)tasks queue: []
-// microtasks queue: []
-// nextTick queue: []
+// (macro)tasks queue: [readFile, promise create, ]
+// microtasks queue: [queueMicrotask, promise then, ]
+// nextTick queue: [nextTick1, nextTick2]
 
 console.log('start'); // 1
 
