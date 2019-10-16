@@ -4,12 +4,12 @@ const os = require('os');
 const lines = new LineSplitStream({
     encoding: 'utf-8',
 });
-let counter = 1;
+// let counter = 1;
 
 function onData(line) {
     console.log(line);
-    console.log(counter);
-    counter += 1;
+    // console.log(counter);
+    // counter += 1;
 }
 
 lines.on('data', onData);
