@@ -22,15 +22,15 @@ const fileStream = fs.createReadStream('bad-char.txt', {
 
 // Вариант 2
 // Читать массив буферов, потом всё объединять и уже тогда приводить к строке
-// const dataPieces = [];
-//
-// fileStream.on('data', buffer => {
-//   // console.log(buffer)
-//   dataPieces.push(buffer);
-// });
-//
-// fileStream.on('end', () => {
-//   const buffer = Buffer.concat(dataPieces);
-//   console.log(buffer);
-//   console.log(buffer.toString('utf-8'));
-// });
+const dataPieces = [];
+
+fileStream.on('data', buffer => {
+  // console.log(buffer)
+  dataPieces.push(buffer);
+});
+
+fileStream.on('end', () => {
+  const buffer = Buffer.concat(dataPieces);
+  console.log(buffer);
+  console.log(buffer.toString('utf-8'));
+});

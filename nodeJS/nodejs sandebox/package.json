@@ -1,0 +1,15 @@
+{
+  "name": "nodejs_sandebox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kuklinv",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "sinon": "^7.5.0"
+  }
+}

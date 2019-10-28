@@ -13,7 +13,7 @@ James
 Michael
 ```
 
-Код для запуска находится в файле `index.js`:
+Код для запуска находится в файле `index.test.js`:
 ```js
 const intervalId = setInterval(() => {
   console.log('James');
