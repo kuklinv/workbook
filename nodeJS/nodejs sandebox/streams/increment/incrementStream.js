@@ -3,7 +3,7 @@ const stream = require('stream');
 module.exports = class incrementStream extends stream.Transform {
     constructor(options) {
         super(options);
-        this.dataArrayForFlashCb = [1, 2, 3, 4, 5, 6];
+        this.dataArrayForFlashCb = [1, 2, 3, 4, 5, 6]; // for emulation _flush() action
     }
 
     _transform(chunk, encoding, callback) {
