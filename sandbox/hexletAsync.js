@@ -4,15 +4,24 @@ const fs = require('fs');
 const filepath = './data/timerFile.txt';
 
 function watch(file, interval, cb) {
-    return setInterval((file, interval) => {
-        fs.stat(file, ((err, stats) => {
-            if (err) {
+    let now = Date.now();
+    let id = setInterval(()=>{
+        fs.stat(file, (err, stats) => {
+            if(err) {
+                clearInterval(id);
                 cb(err);
             }
-            // let fileBeforeState = stats;
-            // if (fileBeforeState)
-        }));
+            let lastMod = stats.mtimeMs;
+            console.log(lastMod);
+            console.log(now);
+            console.log(id);
+            if(lastMod > now) {
+                clearInterval(id);
+            }
+            console.log('was modified');
+        });
     }, interval);
+    cb(null);
 }
 
 const id = watch(filepath, 500, (err) => {
