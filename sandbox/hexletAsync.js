@@ -1,37 +1,141 @@
+// timers
+const fs = require('fs');
+
+const filepath = './data/timerFile.txt';
+
+function watch(file, interval, cb) {
+    return setInterval((file, interval) => {
+        fs.stat(file, ((err, stats) => {
+            if (err) {
+                cb(err);
+            }
+            // let fileBeforeState = stats;
+            // if (fileBeforeState)
+        }));
+    }, interval);
+}
+
+const id = watch(filepath, 500, (err) => {
+    console.log('Wow!');
+});
+
+setTimeout(() => fs.appendFileSync(filepath, 'ehu'), 700);
+
+//Реализуйте эту логику используя функцию setInterval. Функция должна возвращать наружу идентификатор таймера.
+// Если во время анализа файла (через fs.stat) произошла ошибка, то нужно остановить таймер и вызвать колбек,
+// передав туда ошибку.
+// stats.mtimeMs — время последнего изменения
+// Date.now() — текущая дата
+// clearInterval
+
+/////////////////////////////////////////////////////////////////
+// const fs = require('fs');
+// const asyncmap = require('async').map;
+// const path = require('path');
+// const _ = require('lodash');
+
+// function getDirectorySize (dirPath, cb) {
+//   fs.readdir(dirPath, (error1, files) => {
+//     if (error1) {
+//       cb(error1);
+//       return;
+//     }
+//     let filepaths = files.map(name => path.join(dirPath, name));
+//     asyncmap(filepaths, fs.stat, (error2, dirElems) => {
+//       if (error2) {
+//         cb(error2);
+//         return;
+//       }
+//       let filteredMapp = dirElems.filter(elem => elem.isFile());
+//         let sizeArr = filteredMapp.map(elem => elem.size);
+//       let end = _.sumBy(sizeArr);
+//       cb(null, end);
+//     });
+//   });
+// }
+
+// getDirectorySize('./opt', (err, size) => {
+//   console.log(size);
+// });
+
+// export { getDirectorySize };
+
+// fs.readdir - чтение содержимого директории
+// path.join - конструирует пути
+// async.map
+// fs.stat - информация о файле
+// _.sumBy - нахождение суммы в массиве
+
+/// //////////////////////////////////////////////////////////////
+// const fs = require('fs');
+
+// const move = (location, destination, cb) => {
+//   fs.readFile(location, 'utf-8', (error1, data) => {
+//     if(error1) {
+//       cb(error1)
+//       return;
+//     }
+//     console.log(data);
+//     fs.writeFile(destination, data, 'utf-8', (error2) => {
+//       if(error2) {
+//         cb(error2);
+//         return;
+//       }
+//       fs.unlink(location, (error3) => {
+//         if(error3){
+//           cb(error3);
+//           return;
+//         }
+//         cb(null);
+//       });
+//     });
+//   });
+// }
+
+// // export { move };
+
+// move('/opt/myfile', '/tmp/newfile', (error) => {
+//   if (error) {
+//     console.log('oops');
+//     return;
+//   }
+//   console.log('yes!')
+// });
+
 /////error processing
 //
-const fs = require('fs');
-const {map} = require('async');
-const path = require('path');
-const _ = require('lodash');
+// const fs = require('fs');
+// const {map} = require('async');
+// const path = require('path');
+// const _ = require('lodash');
+//
+// function getDirectorySize () {
 
-function getDirectorySize () {
 
-
-    // fs.readdir(dirPath, (error1, files) => {
-    //   if (error1) {
-    //     cb(error1);
-    //     return;
-    //   }
-    //   let filepaths = files.map(name => path.join(dirPath, name));
-    //   async.map(filepaths, fs.stat, (error2, results) => {
-    //     if (error2) {
-    //       cb(error2);
-    //       return;
-    //     }
-    //     let mapper = results.map(elem => elem.size);
-    //     _.sumBy(results, mapper);
-    //   });
-    // });
+// fs.readdir(dirPath, (error1, files) => {
+//   if (error1) {
+//     cb(error1);
+//     return;
+//   }
+//   let filepaths = files.map(name => path.join(dirPath, name));
+//   async.map(filepaths, fs.stat, (error2, results) => {
+//     if (error2) {
+//       cb(error2);
+//       return;
+//     }
+//     let mapper = results.map(elem => elem.size);
+//     _.sumBy(results, mapper);
+//   });
+// });
 
 
 // _.sumBy(отфильрованный массив, (item) => item.size)
 
-}
-
-getDirectorySize('/usr/local/bin', (err, size) => {
-    console.log(size);
-});
+// }
+//
+// getDirectorySize('/usr/local/bin', (err, size) => {
+//     console.log(size);
+// });
 
 // export { getDirectorySize };
 
@@ -42,7 +146,6 @@ getDirectorySize('/usr/local/bin', (err, size) => {
 // _.sumBy - нахождение суммы в массиве
 
 /// ///////////////////////////////////////////////////////
-
 
 
 // const fs = require('fs');
