@@ -1,5 +1,7 @@
-function isPrime (num) {
-    if (num <= 1) {return false;}
+function isPrime(num) {
+    if (num <= 1) {
+        return false;
+    }
     const iter = (counter, prime) => {
         if (counter === num) {
             return true;

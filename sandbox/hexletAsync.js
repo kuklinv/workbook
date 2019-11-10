@@ -12,16 +12,18 @@ function watch(file, interval, cb) {
                 cb(err);
             }
             let lastMod = stats.mtimeMs;
-            console.log(lastMod);
-            console.log(now);
-            console.log(id);
+            // console.log(lastMod);
+            // console.log(now);
+            // console.log(id);
             if(lastMod > now) {
                 clearInterval(id);
+                // cb(null);
             }
-            console.log('was modified');
+            // console.log('was modified');
         });
     }, interval);
     cb(null);
+    return id;
 }
 
 const id = watch(filepath, 500, (err) => {
