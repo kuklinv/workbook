@@ -23,7 +23,7 @@ server.on('request', (req, res) => {
                     }
                 })
                 .pipe(res);
-            res.end('file successfully response');
+            // res.end('file successfully response');
             break;
 
         default:
