@@ -1,5 +1,5 @@
 function sentry(year) {
-    const input = year.split(' ');
+    let input = Array.from(year);
     console.log(input);
     //return;
 }
