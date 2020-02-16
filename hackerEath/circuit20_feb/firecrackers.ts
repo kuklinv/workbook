@@ -1,5 +1,4 @@
-let typesNum: string = '3';
-let costs: string = '2 5 8';
+
 
 const amountsNumber = (n: string, costs: string): any => {
     let numberOfTypes = + n;

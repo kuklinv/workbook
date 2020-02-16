@@ -1,3 +1,6 @@
+// const _ = require('lodash');
+// import { _ } from 'lodash';
+
 process.stdin.setEncoding("utf-8");
 var stdin_input = "";
 
@@ -20,21 +23,26 @@ function main(input) {
     let costsArray = Array.from(inputArg[1], function (item) { return +item; }).filter((item) => item !== 0);
     ////////////////////
     let availableAmount = [];
-    console.log(costsArray);
+    // console.log(costsArray);
     let maxCost = getMaxOfArray(costsArray);
     for (let amount = 1; amount <= maxCost / 2; amount++) {
         let doubleAmount = amount * 2;
         for (let i = 0; i < numberOfTypes; i++) {
-            console.log(costsArray[i]);
-            console.log(amount);
-            console.log(doubleAmount);
+            // console.log(costsArray[i]);
+            // console.log(amount);
+            // console.log(doubleAmount);
             if (costsArray[i] === amount && doubleAmount % 2 === 0 || costsArray[i] === doubleAmount && doubleAmount % 2 === 0) {
                 availableAmount.push(doubleAmount);
             }
-            console.log(availableAmount);
+            // console.log(availableAmount);
         }
     }
-    counterOfAmount = (availableAmount.length).toString();
-    // process.stdout.write(`${counterOfAmount}`);
-    process.stdout.write(counterOfAmount);
+
+    // counterOfAmount = (_.uniq(availableAmount)).length;
+    // counterOfAmount = (availableAmount.length).toString();
+    // process.stdout.write(counterOfAmount);
+    let filteredUniques = new List(availableAmount);
+    counterOfAmount = filteredUniques.length;
+    process.stdout.write(`${counterOfAmount}`);
+
 }
