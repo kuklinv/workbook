@@ -1,4 +1,31 @@
 
+/////////////////////////////////////////////// Permutation of a query 1-d stage
+process.stdin.setEncoding("utf-8");
+var stdin_input = "";
+
+process.stdin.on("data", function (input) {
+    let buffer = Buffer.from(input);
+    stdin_input += buffer.toString();
+});
+
+process.stdin.on("end", function () {
+    main(stdin_input);
+});
+
+function dist(a, b) {
+    return ((Math.sin(a + b)) * (Math.cos(a - b)));
+}
+
+function main(input) {
+    let inputArg = input.split("\n");
+    let numberOfPoint = + inputArg[0];
+    let pointArray = Array.from(inputArg[1], function (item) { return +item; }).filter((item) => item !== 0);
+
+
+
+    process.stdout.write(`${}`);
+}
+
 /////////////////////////////////////////////// Sum of the distance 2-d stage
 
 process.stdin.setEncoding("utf-8");
