@@ -1,29 +1,30 @@
-
 /////////////////////////////////////////////// Permutation of a query 1-d stage
 process.stdin.setEncoding("utf-8");
 var stdin_input = "";
 
-process.stdin.on("data", function (input) {
-    let buffer = Buffer.from(input);
-    stdin_input += buffer.toString();
+process.stdin.on("data", function(input) {
+  let buffer = Buffer.from(input);
+  stdin_input += buffer.toString();
 });
 
-process.stdin.on("end", function () {
-    main(stdin_input);
+process.stdin.on("end", function() {
+  main(stdin_input);
 });
 
 function dist(a, b) {
-    return ((Math.sin(a + b)) * (Math.cos(a - b)));
+  return Math.sin(a + b) * Math.cos(a - b);
 }
 
 function main(input) {
-    let inputArg = input.split("\n");
-    let numberOfPoint = + inputArg[0];
-    let pointArray = Array.from(inputArg[1], function (item) { return +item; }).filter((item) => item !== 0);
+  let inputArg = input.split("\n");
+  let numberOfPermutation = +inputArg[0];
+  let queriesArray = Array.from(inputArg[1], function(item) {
+    return +item;
+  }).filter(item => item !== 0);
+  console.log();
+  console.log();
 
-
-
-    process.stdout.write(`${}`);
+  // process.stdout.write(`${}`);
 }
 
 /////////////////////////////////////////////// Sum of the distance 2-d stage
@@ -31,45 +32,47 @@ function main(input) {
 process.stdin.setEncoding("utf-8");
 var stdin_input = "";
 
-process.stdin.on("data", function (input) {
-    let buffer = Buffer.from(input);
-    stdin_input += buffer.toString();                               // Reading input from STDIN
+process.stdin.on("data", function(input) {
+  let buffer = Buffer.from(input);
+  stdin_input += buffer.toString(); // Reading input from STDIN
 });
 
-process.stdin.on("end", function () {
-    main(stdin_input);
+process.stdin.on("end", function() {
+  main(stdin_input);
 });
 
 function dist(a, b) {
-    return ((Math.sin(a + b)) * (Math.cos(a - b)));
+  return Math.sin(a + b) * Math.cos(a - b);
 }
 
 function main(input) {
-    let inputArg = input.split("\n");
-    let numberOfPoint = + inputArg[0];
-    let pointArray = Array.from(inputArg[1], function (item) { return +item; }).filter((item) => item !== 0);
-    // let dist1, dist2, distTemp
-    let distArr = [];
-    for (let i = 0; i < numberOfPoint.length - 1; i++) {
-        let distTemp = dist(pointArray[i], pointArray[i + 1]);
-        console.log(distTemp)
-        distArr.push(distTemp);
-    }
-    let distance = distArr.reduce(function (item, acc) {
-        return item + acc
-    }, 0);
-    // let distR = [];
-    // distR[0] = dist(pointArray[0], pointArray[1]);
-    // let distance = distR[0];
-    // for (let i = 1; i < numberOfPoint.length - 1; i++) {
-    //     distR[i] = dist(pointArray[0], pointArray[i + 1]);
-    //     if (distR[0] > distR[i]) {
-    //         distance += dist(pointArray[i], pointArray[i + 1]);
-    //     }
-    // }
+  let inputArg = input.split("\n");
+  let numberOfPoint = +inputArg[0];
+  let pointArray = Array.from(inputArg[1], function(item) {
+    return +item;
+  }).filter(item => item !== 0);
+  // let dist1, dist2, distTemp
+  let distArr = [];
+  for (let i = 0; i < numberOfPoint.length - 1; i++) {
+    let distTemp = dist(pointArray[i], pointArray[i + 1]);
+    console.log(distTemp);
+    distArr.push(distTemp);
+  }
+  let distance = distArr.reduce(function(item, acc) {
+    return item + acc;
+  }, 0);
+  // let distR = [];
+  // distR[0] = dist(pointArray[0], pointArray[1]);
+  // let distance = distR[0];
+  // for (let i = 1; i < numberOfPoint.length - 1; i++) {
+  //     distR[i] = dist(pointArray[0], pointArray[i + 1]);
+  //     if (distR[0] > distR[i]) {
+  //         distance += dist(pointArray[i], pointArray[i + 1]);
+  //     }
+  // }
 
-    let res = distance.toFixed(2);
-    process.stdout.write(`${res}`);
+  let res = distance.toFixed(2);
+  process.stdout.write(`${res}`);
 }
 
 // TODO: input =>
