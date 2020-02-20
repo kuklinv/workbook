@@ -75,38 +75,42 @@ process.stdin.on("end", function() {
 });
 
 function main(input) {
-    let inputArg = input.split("\n");
-    let n = +inputArg[0];
-    console.log('NO');
- // process.stdout.write(`${}`);
-    let argsArray = [];
-    for (let i = 1; i < inputArg.length; i++) {
-      argsArray.push(inputArg[i]);
-    }
-    argsArray.forEach(function(item){
-        if(isPolindrome(item)){
-            return `YES ${}`;
-        } else return `NO ${}`;
-    })
+  let inputArg = input.split("\n");
+  let n = +inputArg[0];
+  console.log("NO");
+  // process.stdout.write(`${}`);
+  let argsArray = [];
+  for (let i = 1; i < inputArg.length; i++) {
+    argsArray.push(inputArg[i]);
   }
-
-
-
+  argsArray.forEach(function(item) {
+    if (!isPolindrome(item)) {
+      return "NO";
+    } else if (isEven(item)) {
+      return "YES EVEN";
+    } else return "YES ODD";
+  });
   // process.stdout.write(`${}`);
 }
 
 // poly
 
-const isPolindrome = (input) => {
+const isEven = string => {
+  if (string.length % 2 == 0) {
+    return true;
+  } else return false;
+};
+
+const isPolindrome = input => {
   const strt = 0;
   const fin = input.length;
   if (fin < 2) {
-	return true;
+    return true;
   }
   if (input(strt, 1) !== input(fin - 1, 1)) {
     return false;
   } else {
-    const result = isPolindrome (input(strt + 1, fin - 2));
+    const result = isPolindrome(input(strt + 1, fin - 2));
     return result;
   }
 };
