@@ -74,40 +74,42 @@ process.stdin.on("end", function() {
   main(stdin_input);
 });
 
-function main(input) {
-    let inputArg = input.split("\n");
-    let n = +inputArg[0];
-    console.log('NO');
- // process.stdout.write(`${}`);
-    let argsArray = [];
-    for (let i = 1; i < inputArg.length; i++) {
-      argsArray.push(inputArg[i]);
-    }
-    argsArray.forEach(function(item){
-        if(isPolindrome(item)){
-            return `YES ${}`;
-        } else return `NO ${}`;
-    })
-  }
-
-
-
-  // process.stdout.write(`${}`);
+function isEven(string) {
+  if (string.length % 2 === 0) {
+    return true;
+  } else return false;
 }
 
-// poly
-
-const isPolindrome = (input) => {
+function isPolindrome(input) {
   const strt = 0;
   const fin = input.length;
   if (fin < 2) {
-	return true;
+    return true;
   }
-  if (input(strt, 1) !== input(fin - 1, 1)) {
+  if (input.substring(strt, 1) !== input.substring(fin - 1)) {
     return false;
   } else {
-    const result = isPolindrome (input(strt + 1, fin - 2));
+    const result = isPolindrome(input.substring(strt + 1, fin - 2));
     return result;
   }
-};
-//
+}
+
+function main(input) {
+  let inputArg = input.split("\n");
+  let n = +inputArg[0];
+  let argsArray = [];
+  for (let i = 1; i < inputArg.length; i++) {
+    argsArray.push(inputArg[i]);
+  }
+  argsArray.forEach(function(item) {
+    if (!isPolindrome(item)) {
+      process.stdout.write("NO\n");
+    } else if (isEven(item)) {
+      process.stdout.write("YES EVEN\n");
+    } else process.stdout.write("YES ODD\n");
+  });
+}
+
+main("3\nabc\nabba\naba");
+
+// not pass tests.........
