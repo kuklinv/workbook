@@ -22,17 +22,39 @@
 // let b = "JavaScript";
 // console.log(a == b ? true : false);
 
-function swap(map, key) {
-  for (let item of Object.keys(map)) {
-    if (map[item] == key) {
-      console.log(map[item]);
-      console.log([key]);
-      map.set('key', item);
-      map.delete(map[item]);
+// function swap(map, key) {
+//   if (map.has(key)) {
+//     let tempKey = map.get(key);
+//     map.delete(key);
+//     map.set(tempKey, key);
+//     return map;
+//   } else return false;
+// }
+
+// swap({ user: "Tom", confirm: "isConfirmed" }, "confirm"); // "isConfirmed"
+// // console.log(swap({ "user": "Tom", "confirm": "isConfirmed" }, login)); // false
+
+// Если коротко то вот, что нужно сделать: пройтись по переданной map в for-of, создать локальный set
+//  в который внутри этого цикла, по условию - является ли значение ключа массивом, вы будите добавлять
+//  все значения этого массива, а затем это set вы можете присваивать ключу в мапе(внутри этого условия).
+//  После этого цикла вам нужно сконкатенировать значения в одну строку и вывести ее.
+
+function modifyMap(map) {
+  let resStr = "";
+  for (let entry in map) {
+    let localSet = new Set();
+    console.log(entry);
+    console.log(map[entry]);
+    if (typeof map[entry] == "object") {
+      localSet.add(map[entry]);
+      map.set(entry, localSet);
+      resStr += `${entry}: ${localSet};`;
+    } else {
+      map.delete(entry);
     }
   }
-  return (console.log(map));
+  console.log(resStr);
 }
 
-console.log(swap({ "user": "Tom", "confirm": "isConfirmed" }, confirm)); // "isConfirmed"
-// console.log(swap({ "user": "Tom", "confirm": "isConfirmed" }, login)); // false
+modifyMap({ log14: [1, 2, 3, 3, 2, 1], log15: "none data", log16: ["s", "S"] }); //log14:123;log16:sS;
+modifyMap({ log: [1, 1, 1] }); //log:1;
