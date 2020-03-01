@@ -42,13 +42,12 @@
 function modifyMap(map) {
   let resStr = "";
   for (let entry in map) {
-    let localSet = new Set();
-    console.log(entry);
-    console.log(map[entry]);
+    // console.log(entry);
+    // console.log(map[entry]);
     if (typeof map[entry] == "object") {
-      localSet.add(map[entry]);
+      let localSet = new Set(map[entry]);
       map.set(entry, localSet);
-      resStr += `${entry}: ${localSet};`;
+      resStr += `${entry}:${localSet};`;
     } else {
       map.delete(entry);
     }
