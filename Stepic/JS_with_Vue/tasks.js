@@ -92,12 +92,37 @@
 
 // getWeekDay(data);
 
-function findMidlle(arr) {
-  //Ваш код
+// function findMidlle(arr) {
+//   let i;
+//   let arrF = arr.filter(item => item !== null);
+//   if (arrF.length % 2 === 0) {
+//     i = arrF.length / 2 - 1;
+//   } else {
+//     i = Math.floor(arrF.length / 2);
+//   }
+//   return arr.length == 0 ? null : arrF[i];
+//   //Ваш код
+// }
+
+// findMidlle(["a", "b", "c"]); // b
+// findMidlle(["1", "2", "3", "4"]); //2
+// findMidlle([]); // null
+// findMidlle(["a", "b", "c", "d", "e"]); //c
+// findMidlle(["a", "b", "c", null, null]); // b
+
+///// OOP
+/*
+На вход вашей функции подаётся 3 аргумента, первым аргументом utilObj является объект с набором методов,
+ вторым (targetObj) - другой объект, и третьим параметр примитивного типа param.
+Ваша задача - вызвать каждый метод(функцию) первого объекта по порядку с контекстом второго объекта
+и параметром param.
+*Чтобы всё корректно работало не используйте apply! Возможны ошибки из-за того, что у массива
+есть метод apply
+*Подсказка: понадобится цикл и typeof
+*/
+
+function func(utilObj,targetObj,param){
+  //Code
 }
 
-findMidlle(["a", "b", "c"]); // b
-findMidlle(["1", "2", "3", "4"]); //2
-findMidlle([]); // null
-findMidlle(["a", "b", "c", "d", "e"]); //c
-findMidlle(["a", "b", "c", null, null]); // b
+func(obj1;{"name":"Tom","id":"3"};ID); //Tom ID:3
