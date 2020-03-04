@@ -121,8 +121,40 @@
 *Подсказка: понадобится цикл и typeof
 */
 
-function func(utilObj,targetObj,param){
-  //Code
+// function func(utilObj,targetObj,param){
+//   for(let item in utilObj){
+//     if(typeof item == 'function'){
+//       utilObj[item].call(targetObj, param);
+//     }
+//   }
+//     // utilObj[Object.getOwnPropertyNames(utilObj)].call(targetObj, param);
+// }
+
+// func(obj1;{"name":"Tom","id":"3"};ID); //Tom ID:3
+
+function transform(arr) {
+  let resObj = {};
+  arr.forEach(function(objItem) {
+    Object.defineProperty(resObj, objItem.name, {
+      value: objItem.value
+    });
+  });
+  console.log(resObj);
+  // return resObj;
 }
 
-func(obj1;{"name":"Tom","id":"3"};ID); //Tom ID:3
+transform([
+  { name: "width", value: 10 },
+  { name: "height", value: 20 }
+]); //{"width":10,"height":20}
+transform([
+  { name: "color", value: "#f0f0f0" },
+  { name: "width", value: "100%" }
+]); //{"color":"#f0f0f0","width":"100%"}
+transform([
+  { name: "color", value: "#f0f0f0" },
+  { name: "width", value: "100%" },
+  { name: "opacity", value: 1 }
+]); //{"color":"#f0f0f0","width":"100%","opacity":1}
+
+// Object.assing(targetObj, srcObj1, srcObj2,...,scrObjN)
