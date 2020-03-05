@@ -132,29 +132,76 @@
 
 // func(obj1;{"name":"Tom","id":"3"};ID); //Tom ID:3
 
-function transform(arr) {
-  let resObj = {};
-  arr.forEach(function(objItem) {
-    Object.defineProperty(resObj, objItem.name, {
-      value: objItem.value
-    });
-  });
-  console.log(resObj);
-  // return resObj;
+// function transform(arr) {
+//   let resObj = {};
+//   arr.forEach(function(objItem) {
+//     Object.defineProperty(resObj, objItem.name, {
+//       value: objItem.value
+//     });
+//   });
+//   console.log(resObj);
+//   // return resObj;
+// }
+
+// transform([
+//   { name: "width", value: 10 },
+//   { name: "height", value: 20 }
+// ]); //{"width":10,"height":20}
+// transform([
+//   { name: "color", value: "#f0f0f0" },
+//   { name: "width", value: "100%" }
+// ]); //{"color":"#f0f0f0","width":"100%"}
+// transform([
+//   { name: "color", value: "#f0f0f0" },
+//   { name: "width", value: "100%" },
+//   { name: "opacity", value: 1 }
+// ]); //{"color":"#f0f0f0","width":"100%","opacity":1}
+
+// // Object.assing(targetObj, srcObj1, srcObj2,...,scrObjN)
+
+class Component {
+  constructor(name) {
+    this.name = name;
+  }
 }
 
-transform([
-  { name: "width", value: 10 },
-  { name: "height", value: 20 }
-]); //{"width":10,"height":20}
-transform([
-  { name: "color", value: "#f0f0f0" },
-  { name: "width", value: "100%" }
-]); //{"color":"#f0f0f0","width":"100%"}
-transform([
-  { name: "color", value: "#f0f0f0" },
-  { name: "width", value: "100%" },
-  { name: "opacity", value: 1 }
-]); //{"color":"#f0f0f0","width":"100%","opacity":1}
+class Menu extends Component {
+  constructor(name, type) {
+    super();
+    this.name = name;
+    this.type = type;
+    this.menuElements = new Set();
+    this.len = function() {
+      return this.menuElements.call.size;
+    };
+  }
+  add(element) {
+    return this.menuElements.add(element.toUpperCase());
+  }
+  remove(element) {
+    return this.menuElements.delete(element.toUpperCase());
+  }
 
-// Object.assing(targetObj, srcObj1, srcObj2,...,scrObjN)
+  get fullName() {
+    return `${this.type}_${this.name}`;
+  }
+
+  set fullName(string) {
+    let setParam = string.split("_");
+    this.name = setParam[0];
+    this.type = setParam[1] || this.type;
+  }
+}
+
+let menu = new Menu("mainMenu", "expand");
+menu.add("portfolio");
+console.log(menu.menuElements);
+menu.add("portfolio");
+console.log(menu.menuElements);
+menu.add("contacts");
+console.log(menu.menuElements);
+menu.remove("CONTACts");
+console.log(menu.menuElements);
+menu.fullName = "expand_menu"; // "type_menuName"
+let name = menu.fullName;
+console.log("fullname:" + name + ";items size:" + menu.len);
