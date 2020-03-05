@@ -231,6 +231,8 @@
 
 function computeJSON(json, obj) {
   const inputObjFromJSON = JSON.parse(json);
+  const resObj = Object.assign({}, inputObjFromJSON, obj);
+  return JSON.stringify(resObj);
 }
 
 computeJSON('{ "name": "valuesObj", "value": [1, 2, 3] }', {
