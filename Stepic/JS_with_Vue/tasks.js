@@ -159,49 +159,82 @@
 
 // // Object.assing(targetObj, srcObj1, srcObj2,...,scrObjN)
 
-class Component {
-  constructor(name) {
-    this.name = name;
-  }
+////////////class
+
+// class Component {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// class Menu extends Component {
+//   constructor(name, type) {
+//     super();
+//     this.name = name;
+//     this.type = type;
+//     this.menuElements = new Set();
+//   }
+//   add(element) {
+//     return this.menuElements.add(element.toUpperCase());
+//   }
+//   remove(element) {
+//     return this.menuElements.delete(element.toUpperCase());
+//   }
+
+//   get fullName() {
+//     return `${this.type}_${this.name}`;
+//   }
+
+//   set fullName(string) {
+//     let setParam = string.split("_");
+//     this.name = setParam[0];
+//     this.type = setParam[1] || this.type;
+//   }
+
+//   get len() {
+//     return this.menuElements.size;
+//   }
+// }
+
+// let menu = new Menu("mainMenu", "expand");
+// menu.add("portfolio");
+// console.log(menu.menuElements);
+// menu.add("portfolio");
+// console.log(menu.menuElements);
+// menu.add("contacts");
+// console.log(menu.menuElements);
+// menu.remove("CONTACts");
+// console.log(menu.menuElements);
+// menu.fullName = "expand_menu"; // "type_menuName"
+
+// ///////////////////////////styling OUTPUT //////////////////!!!!!!!!!!!!!
+
+// let name = menu.fullName;
+// console.log(
+//   `%cfullname: ${name};items size: ${menu.len}`,
+//   "color: red; font-size: 30px;"
+// );
+// console.log("%cThis is large red text", "color: red; font-size: 30px;");
+// console.log(
+//   "%cHello there!",
+//   `
+//   background: white;
+//   border: 3px solid red;
+//   color: red;
+//   font-size: 50px;
+//   margin: 40px;
+//   padding: 20px;
+// `
+// );
+
+////////////////////////////JSON
+
+function computeJSON(json, obj) {
+  const inputObjFromJSON = JSON.parse(json);
 }
 
-class Menu extends Component {
-  constructor(name, type) {
-    super();
-    this.name = name;
-    this.type = type;
-    this.menuElements = new Set();
-    this.len = function() {
-      return this.menuElements.call.size;
-    };
-  }
-  add(element) {
-    return this.menuElements.add(element.toUpperCase());
-  }
-  remove(element) {
-    return this.menuElements.delete(element.toUpperCase());
-  }
-
-  get fullName() {
-    return `${this.type}_${this.name}`;
-  }
-
-  set fullName(string) {
-    let setParam = string.split("_");
-    this.name = setParam[0];
-    this.type = setParam[1] || this.type;
-  }
-}
-
-let menu = new Menu("mainMenu", "expand");
-menu.add("portfolio");
-console.log(menu.menuElements);
-menu.add("portfolio");
-console.log(menu.menuElements);
-menu.add("contacts");
-console.log(menu.menuElements);
-menu.remove("CONTACts");
-console.log(menu.menuElements);
-menu.fullName = "expand_menu"; // "type_menuName"
-let name = menu.fullName;
-console.log("fullname:" + name + ";items size:" + menu.len);
+computeJSON('{ "name": "valuesObj", "value": [1, 2, 3] }', {
+  name: "valuesObj",
+  id: 7
+});
+//{"name":"valuesObj","value":[1,2,3],"id":7}
