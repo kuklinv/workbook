@@ -248,5 +248,5 @@ function isIsogram(str) {
   if (str === unicStr.join("")) return true;
   else return false;
 }
-console.log(isIsogram("hello");) //false
-isIsogram("abc"); //true;
+console.log(isIsogram("hello")); //false
+console.log(isIsogram("abc")); //true;
