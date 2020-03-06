@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+
+CACHE:
+index.html
+tasks.js
+
+NETWORK:
+*
+
+FALLBACK:
+offline.html

@@ -229,14 +229,24 @@
 
 ////////////////////////////JSON
 
-function computeJSON(json, obj) {
-  const inputObjFromJSON = JSON.parse(json);
-  const resObj = Object.assign({}, inputObjFromJSON, obj);
-  return JSON.stringify(resObj);
-}
+// function computeJSON(json, obj) {
+//   const inputObjFromJSON = JSON.parse(json);
+//   const resObj = Object.assign({}, inputObjFromJSON, obj);
+//   return JSON.stringify(resObj);
+// }
 
-computeJSON('{ "name": "valuesObj", "value": [1, 2, 3] }', {
-  name: "valuesObj",
-  id: 7
-});
-//{"name":"valuesObj","value":[1,2,3],"id":7}
+// computeJSON('{ "name": "valuesObj", "value": [1, 2, 3] }', {
+//   name: "valuesObj",
+//   id: 7
+// });
+// //{"name":"valuesObj","value":[1,2,3],"id":7}
+
+function isIsogram(str) {
+  const arrFromStr = str.split("");
+  const uniq = arr => arr.filter(arrItem => arr.indexOf(arrItem));
+  const unicStr = uniq(arrFromStr);
+  if (str === unicStr.join("")) return true;
+  else return false;
+}
+console.log(isIsogram("hello");) //false
+isIsogram("abc"); //true;
