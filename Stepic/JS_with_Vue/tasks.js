@@ -111,14 +111,14 @@
 // findMidlle(["a", "b", "c", null, null]); // b
 
 ///// OOP
-/*
-На вход вашей функции подаётся 3 аргумента, первым аргументом utilObj является объект с набором методов,
- вторым (targetObj) - другой объект, и третьим параметр примитивного типа param.
-Ваша задача - вызвать каждый метод(функцию) первого объекта по порядку с контекстом второго объекта
-и параметром param.
-*Чтобы всё корректно работало не используйте apply! Возможны ошибки из-за того, что у массива
-есть метод apply
-*Подсказка: понадобится цикл и typeof
+/* !
+// На вход вашей функции подаётся 3 аргумента, первым аргументом utilObj является объект с набором методов,
+//  вторым (targetObj) - другой объект, и третьим параметр примитивного типа param.
+// Ваша задача - вызвать каждый метод(функцию) первого объекта по порядку с контекстом второго объекта
+// и параметром param.
+// *Чтобы всё корректно работало не используйте apply! Возможны ошибки из-за того, что у массива
+// есть метод apply
+// *Подсказка: понадобится цикл и typeof
 */
 
 // function func(utilObj,targetObj,param){
@@ -241,14 +241,52 @@
 // });
 // //{"name":"valuesObj","value":[1,2,3],"id":7}
 
-function isIsogram(str) {
-  const arrFromStr = str.split("");
-  console.log(arrFromStr);
-  const uniq = arr => arr.filter(arrItem => arr.indexOf(arrItem));
-  const unicStr = uniq(arrFromStr);
-  console.log(unicStr);
-  if (str === unicStr.join("")) return true;
-  else return false;
-}
-console.log(isIsogram("hello")); //false
+// function isIsogram(str) {
+//   const arrFromStr = str.toUpperCase().split("");
+//   const uniqStr = Array.from(new Set(arrFromStr));
+//   if (arrFromStr.length !== uniqStr.length) return false;
+//   else return true;
+// }
+// console.log(isIsogram("hello")); //false
 // console.log(isIsogram("abc")); //true;
+// console.log(isIsogram("Abca")); //false;
+
+//   function repeatSub(str) {
+//     if (str.length == 0) return 0;
+//     let strMod = str.toLowerCase();
+//     let count = 1;
+//     let maxCount = 1;
+//     for (let i = 0; i < strMod.length; i++) {
+//       if (strMod[i + 1] == strMod[i]) {
+//         count++;
+//         if (count > maxCount) maxCount = count;
+//       }
+//     }
+//     return maxCount;
+//   }
+
+// console.log(repeatSub("sdsfffa")); //3
+// console.log(repeatSub("qWwerty")); //2
+// console.log(repeatSub("")); //0
+// console.log(repeatSub("abc")); //1
+
+let taskArray1 = [
+  { fio: "Clint Eastwood", task: "Купить револьвер", complete: 1 },
+  { fio: "Nikola Tesla", task: "Купить револьвер", complete: 0 }
+];
+let mode1 = "task";
+
+let taskArray2 = [
+  { fio: "Clint Eastwood", task: "Купить револьвер", complete: 1 },
+  { fio: "Nikola Tesla", task: "Купить револьвер", complete: 0 },
+  { fio: "Nikola Tesla", task: "Переменный ток", complete: 1 }
+];
+
+let mode2 = "fio";
+
+function parseTasks(taskArray, mode) {
+  // Ваш Код
+}
+
+console.log(parseTasks(taskArray1, mode1));
+console.log(parseTasks(taskArray2, mode2));
