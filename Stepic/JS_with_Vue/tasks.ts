@@ -6,6 +6,7 @@
 //   res = filterInputArr.join("");
 //   return res;
 // }
+
 // function beginWith(str, subs) {
 //   let a = "";
 //   let b = "";
@@ -16,9 +17,11 @@
 //   return a == b ? true : false;
 // }
 // console.log(beginWith("JavScript", "java"));
+
 // let a = "Java";
 // let b = "JavaScript";
 // console.log(a == b ? true : false);
+
 // function swap(map, key) {
 //   if (map.has(key)) {
 //     let tempKey = map.get(key);
@@ -27,12 +30,15 @@
 //     return map;
 //   } else return false;
 // }
+
 // swap({ user: "Tom", confirm: "isConfirmed" }, "confirm"); // "isConfirmed"
 // // console.log(swap({ "user": "Tom", "confirm": "isConfirmed" }, login)); // false
+
 // Если коротко то вот, что нужно сделать: пройтись по переданной map в for-of, создать локальный set
 //  в который внутри этого цикла, по условию - является ли значение ключа массивом, вы будите добавлять
 //  все значения этого массива, а затем это set вы можете присваивать ключу в мапе(внутри этого условия).
 //  После этого цикла вам нужно сконкатенировать значения в одну строку и вывести ее.
+
 // function modifyMap(map) {
 //   let resStr = "";
 //   for (let entry in map) {
@@ -58,8 +64,10 @@
 //   }
 //   console.log(resStr);
 // }
+
 // modifyMap({ log14: [1, 2, 3, 3, 2, 1], log15: "none data", log16: ["s", "S"] }); //log14:123;log16:sS;
 // modifyMap({ log: [1, 1, 1] }); //log:1;
+
 // const data = {
 //   Day: "Monday",
 //   Month: "May",
@@ -67,6 +75,7 @@
 //   FullYear: 2019
 // };
 // // Mon May 06 2019
+
 // function getWeekDay(date) {
 //   const weakSet = [
 //     "Воскресенье",
@@ -80,7 +89,9 @@
 //   let day = date.getDay();
 //   console.log(weakSet[day]);
 // }
+
 // getWeekDay(data);
+
 // function findMidlle(arr) {
 //   let i;
 //   let arrF = arr.filter(item => item !== null);
@@ -92,11 +103,13 @@
 //   return arr.length == 0 ? null : arrF[i];
 //   //Ваш код
 // }
+
 // findMidlle(["a", "b", "c"]); // b
 // findMidlle(["1", "2", "3", "4"]); //2
 // findMidlle([]); // null
 // findMidlle(["a", "b", "c", "d", "e"]); //c
 // findMidlle(["a", "b", "c", null, null]); // b
+
 ///// OOP
 /* !
 // На вход вашей функции подаётся 3 аргумента, первым аргументом utilObj является объект с набором методов,
@@ -107,6 +120,7 @@
 // есть метод apply
 // *Подсказка: понадобится цикл и typeof
 */
+
 // function func(utilObj,targetObj,param){
 //   for(let item in utilObj){
 //     if(typeof item == 'function'){
@@ -115,7 +129,9 @@
 //   }
 //     // utilObj[Object.getOwnPropertyNames(utilObj)].call(targetObj, param);
 // }
+
 // func(obj1;{"name":"Tom","id":"3"};ID); //Tom ID:3
+
 // function transform(arr) {
 //   let resObj = {};
 //   arr.forEach(function(objItem) {
@@ -126,6 +142,7 @@
 //   console.log(resObj);
 //   // return resObj;
 // }
+
 // transform([
 //   { name: "width", value: 10 },
 //   { name: "height", value: 20 }
@@ -139,13 +156,17 @@
 //   { name: "width", value: "100%" },
 //   { name: "opacity", value: 1 }
 // ]); //{"color":"#f0f0f0","width":"100%","opacity":1}
+
 // // Object.assing(targetObj, srcObj1, srcObj2,...,scrObjN)
+
 ////////////class
+
 // class Component {
 //   constructor(name) {
 //     this.name = name;
 //   }
 // }
+
 // class Menu extends Component {
 //   constructor(name, type) {
 //     super();
@@ -159,18 +180,22 @@
 //   remove(element) {
 //     return this.menuElements.delete(element.toUpperCase());
 //   }
+
 //   get fullName() {
 //     return `${this.type}_${this.name}`;
 //   }
+
 //   set fullName(string) {
 //     let setParam = string.split("_");
 //     this.name = setParam[0];
 //     this.type = setParam[1] || this.type;
 //   }
+
 //   get len() {
 //     return this.menuElements.size;
 //   }
 // }
+
 // let menu = new Menu("mainMenu", "expand");
 // menu.add("portfolio");
 // console.log(menu.menuElements);
@@ -181,7 +206,9 @@
 // menu.remove("CONTACts");
 // console.log(menu.menuElements);
 // menu.fullName = "expand_menu"; // "type_menuName"
+
 // ///////////////////////////styling OUTPUT //////////////////!!!!!!!!!!!!!
+
 // let name = menu.fullName;
 // console.log(
 //   `%cfullname: ${name};items size: ${menu.len}`,
@@ -199,17 +226,21 @@
 //   padding: 20px;
 // `
 // );
+
 ////////////////////////////JSON
+
 // function computeJSON(json, obj) {
 //   const inputObjFromJSON = JSON.parse(json);
 //   const resObj = Object.assign({}, inputObjFromJSON, obj);
 //   return JSON.stringify(resObj);
 // }
+
 // computeJSON('{ "name": "valuesObj", "value": [1, 2, 3] }', {
 //   name: "valuesObj",
 //   id: 7
 // });
 // //{"name":"valuesObj","value":[1,2,3],"id":7}
+
 // function isIsogram(str) {
 //   const arrFromStr = str.toUpperCase().split("");
 //   const uniqStr = Array.from(new Set(arrFromStr));
@@ -219,6 +250,7 @@
 // console.log(isIsogram("hello")); //false
 // console.log(isIsogram("abc")); //true;
 // console.log(isIsogram("Abca")); //false;
+
 //   function repeatSub(str) {
 //     if (str.length == 0) return 0;
 //     let strMod = str.toLowerCase();
@@ -232,50 +264,56 @@
 //     }
 //     return maxCount;
 //   }
+
 // console.log(repeatSub("sdsfffa")); //3
 // console.log(repeatSub("qWwerty")); //2
 // console.log(repeatSub("")); //0
 // console.log(repeatSub("abc")); //1
-var taskArray1 = [
-    { fio: "Clint Eastwood", task: "Купить револьвер", complete: 1 },
-    { fio: "Nikola Tesla", task: "Купить револьвер", complete: 0 }
+
+let taskArray1: Array<{}> = [
+  { fio: "Clint Eastwood", task: "Купить револьвер", complete: 1 },
+  { fio: "Nikola Tesla", task: "Купить револьвер", complete: 0 }
 ];
-var mode1 = "task";
-var taskArray2 = [
-    { fio: "Clint Eastwood", task: "Купить револьвер", complete: 1 },
-    { fio: "Nikola Tesla", task: "Купить револьвер", complete: 0 },
-    { fio: "Nikola Tesla", task: "Переменный ток", complete: 1 }
+let mode1: string = "task";
+
+let taskArray2: Array<{}> = [
+  { fio: "Clint Eastwood", task: "Купить револьвер", complete: 1 },
+  { fio: "Nikola Tesla", task: "Купить револьвер", complete: 0 },
+  { fio: "Nikola Tesla", task: "Переменный ток", complete: 1 }
 ];
-var mode2 = "fio";
-function parseTasks(taskArray, mode) {
-    var resultObject = {};
-    var uniqFios = [];
-    var uniqTasks = [];
-    var fioKeys = [];
-    var taskKeys = [];
-    taskArray.forEach(function (objItem) {
-        fioKeys.push(Object.keys(objItem)[0]);
-        taskKeys.push(Object.keys(objItem)[1]);
-    });
-    uniqFios = new Set(fioKeys);
-    uniqTasks = new Set(taskKeys);
-    console.log(uniqFios);
-    console.log(uniqTasks);
-    if (mode == "task") {
-        resultObject = getTask(taskArray);
-    }
-    else if (mode == "fio") {
-        resultObject = getFio(taskArray);
-    }
-    function getTask(array) {
-        var forResult = {};
-        array.forEach(function () { });
-        return;
-    }
-    function getFio(array) {
-        return;
-    }
-    return resultObject;
+
+let mode2: string = "fio";
+
+function parseTasks(taskArray: Array<{}>, mode: string): object {
+  let resultObject = {};
+  let uniqFios: Array<string> = [];
+  let uniqTasks: Array<string> = [];
+  let fioKeys: string[] = [];
+  let taskKeys: string[] = [];
+  taskArray.forEach(function(objItem) {
+    fioKeys.push(Object.keys(objItem)[0]);
+    taskKeys.push(Object.keys(objItem)[1]);
+  });
+  uniqFios = new Set(fioKeys);
+  uniqTasks = new Set(taskKeys);
+  console.log(uniqFios);
+  console.log(uniqTasks);
+
+  if (mode == "task") {
+    resultObject = getTask(taskArray);
+  } else if (mode == "fio") {
+    resultObject = getFio(taskArray);
+  }
+  function getTask(array: Array<{}>): object {
+    let forResult = {};
+    array.forEach(function() {});
+    return;
+  }
+  function getFio(array: Array<{}>): object {
+    return;
+  }
+  return resultObject;
 }
+
 console.log(parseTasks(taskArray1, mode1));
 // console.log(parseTasks(taskArray2, mode2));
