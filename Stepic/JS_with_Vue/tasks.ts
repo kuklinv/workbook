@@ -290,30 +290,41 @@ function parseTasks(taskArray: Array<{}>, mode: string): object {
   let uniqTasks: Array<string> = [];
   let fioKeys: string[] = [];
   let taskKeys: string[] = [];
-  taskArray.forEach(function(objItem) {
-    fioKeys.push(Object.keys(objItem)[0]);
-    taskKeys.push(Object.keys(objItem)[1]);
+  taskArray.forEach(function(objItem): void {
+    fioKeys.push(Object.values(objItem)[0]); //
+    taskKeys.push(Object.values(objItem)[1]); //
   });
-  uniqFios = new Set(fioKeys);
-  uniqTasks = new Set(taskKeys);
+  uniqFios = new Set(fioKeys); //
+  uniqTasks = new Set(taskKeys); //*! its OK before this line
   console.log(uniqFios);
   console.log(uniqTasks);
 
   if (mode == "task") {
-    resultObject = getTask(taskArray);
+    resultObject = getTask(taskArray, uniqTasks);
   } else if (mode == "fio") {
-    resultObject = getFio(taskArray);
+    resultObject = getFio(taskArray, uniqFios);
   }
-  function getTask(array: Array<{}>): object {
+  function getTask(array: Array<{}>, keyword: string): object {
     let forResult = {};
-    array.forEach(function() {});
-    return;
+    array.forEach(function(element: object) {
+      if (!forResult.hasOwnProperty(element.task)) {
+        Object.defineProperty(forResult, [element.task], {
+          value: new Array(element.fio, element["complete"]) //* TODO: not solved yet
+        });
+      } else if (forResult.hasOwnProperty(element.task)) {
+        //* TODO: push to value-array
+      }
+    });
+    // return forResult;
+    console.log(forResult);
   }
-  function getFio(array: Array<{}>): object {
+  function getFio(array: Array<{}>, keyword: string): object {
     return;
   }
   return resultObject;
 }
 
-console.log(parseTasks(taskArray1, mode1));
+// console.log(parseTasks(taskArray1, mode1));
 // console.log(parseTasks(taskArray2, mode2));
+parseTasks(taskArray1, mode1);
+// parseTasks(taskArray2, mode2);
