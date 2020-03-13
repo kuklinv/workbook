@@ -247,8 +247,9 @@ function isIsogram(str) {
   const uniq = arr => arr.filter(arrItem => arr.indexOf(arrItem));
   const unicStr = uniq(arrFromStr);
   console.log(unicStr);
-  if (str === unicStr.join("")) return true;
-  else return false;
+  // if (str === unicStr.join("")) return true;
+  // else return false;
 }
-console.log(isIsogram("hello")); //false
+isIsogram("hello");
+// console.log(isIsogram("hello")); //false
 // console.log(isIsogram("abc")); //true;
