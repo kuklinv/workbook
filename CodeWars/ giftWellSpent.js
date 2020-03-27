@@ -1,11 +1,25 @@
 const buy = function(x, arr) {
-  console.log(x);
-  let result = arr.map(function(item, acc) {
-    if (item + acc == x) return item;
-  }, arr[0]);
-  console.log(result);
+  let resIndexArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let tempArr = arr.filter(item => item != arr[i]);
+    if (check(arr[i], tempArr, x) && resIndexArr.length < 2) {
+      resIndexArr.push(i);
+    }
+  }
+  console.log(resIndexArr);
+  // return resIndexArr;
 };
-buy(2, [1, 1]);
+
+function check(item, arr, sum) {
+  for (let n = 0; n < arr.length; n++) {
+    if (arr[n] + item == sum) {
+      return true;
+    } else return false;
+  }
+}
+
+// buy(2, [1, 1]);
+buy(5, [5, 2, 3, 4, 5]);
 /*
 
 buy(2,[1,1])       = [0,1]
