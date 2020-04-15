@@ -17,14 +17,41 @@ Output 1:
 "10 glasses of water"
 */
 
+//  named =>  Responsible Drinking
+// TODO: i'v not right logic its may be
+//  '1 beer
+//   2 glasses of wine and 1 shot'
 
 function hydrate(s) {
     let sumAlc = 0;
+    let glassWord;
     let sArr = s.split(',');
-    // console.log(sArr);
-    let routArr = sArr.map(item => item.split(' '))
-    console.log(routArr);
-    console.log(`${sumAlc} glasses of water`);
+    let noSpacesSArr = [];
+    sArr.forEach((item) => noSpacesSArr.push(item.trim()));
+    let routArr = noSpacesSArr.map(item => item.split(' '))
+    // routArr.forEach(function (item) {
+    //   if(!item.some(item => item === 'water')) {
+    //       sumAlc += +item[0];
+    //   }
+    // });
+    routArr.forEach(function (item) {
+            sumAlc += +item[0];
+    });
+    // console.log(`${sumAlc} glasses of water`);
+    if(sumAlc !== 1) {
+        glassWord = 'glasses';
+    } else {
+        glassWord = 'glass';
+    }
+    return `${sumAlc} ${glassWord} of water`;
 }
 
 hydrate('1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer');
+// "10 glasses of water"
+
+////beginner
+// function check(a, x) {
+//     return a.some(item =>  item === x);
+// }
+//
+// console.log(check([80, 117, 115, 104, 45, 85, 112, 115], 45)); // true
