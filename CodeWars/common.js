@@ -29,26 +29,16 @@ function hydrate(s) {
     let sArr = s.split(',');
     let noSpacesSArr = [];
     sArr.forEach((item) => noSpacesSArr.push(item.trim()));
-    console.log(noSpacesSArr);
     let subArrayforRootArr = [];
     noSpacesSArr.forEach(function (item) {
         if (item.indexOf('and') + 1) {
-            console.log(item);
             let tempSubArray = item.split('and');
-            console.log(tempSubArray);
             tempSubArray.forEach((item) => subArrayforRootArr.push(item.trim()));
             noSpacesSArr.splice(noSpacesSArr.indexOf(item), 1);
         }
         return subArrayforRootArr;
     });
-    console.log(subArrayforRootArr);
-
-    console.log(noSpacesSArr);
-
     let rootArr = noSpacesSArr.concat(subArrayforRootArr);
-
-    console.log(rootArr);
-
     let resArrr = rootArr.map(item => item.split(' '));
 
     resArrr.forEach(function (item) {
@@ -62,9 +52,10 @@ function hydrate(s) {
     } else {
         glassWord = 'glass';
     }
-    console.log(`${sumAlc} ${glassWord} of water`);
+    return `${sumAlc} ${glassWord} of water`;
 }
 
+hydrate('1 shot, 5 beers, 2 shots, 1 glass of wine and 1 beer, 1 beer');
 // function hydrateFirstVeersion(s) {
 //     // let separator = new RegExp(/,|and /gm); //
 //     let separator = new RegExp(/\s|and /gm);
@@ -95,7 +86,7 @@ function hydrate(s) {
 //     console.log(`${sumAlc} ${glassWord} of water`);
 // }
 
-hydrate('1 shot, 5 beers, 2 shots, 1 glass of wine and 1 beer, 1 beer');
+
 // "10 glasses of water"
 
 ////beginner
