@@ -1,8 +1,18 @@
-function arrayPlusArray(arr1, arr2) {
-    return arr1.concat(arr2).reduce((item, acc) => item + acc);
+//Moving Zeros To The End
+var moveZeros = function (arr) {
+    // TODO: Program me
 }
 
-console.log(arrayPlusArray([1, 2, 3], [3, 2, 1])); //12
+/*
+moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
+
+*/
+
+// function arrayPlusArray(arr1, arr2) {
+//     return arr1.concat(arr2).reduce((item, acc) => item + acc);
+// }
+
+// console.log(arrayPlusArray([1, 2, 3], [3, 2, 1])); //12
 
 
 // function paperwork(n, m) {
