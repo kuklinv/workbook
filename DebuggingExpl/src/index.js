@@ -16,5 +16,3 @@ button.addEventListener("click", () => {
     totalElement.innerText = countCache.total();
 });
 
-
-
