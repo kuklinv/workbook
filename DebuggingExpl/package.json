@@ -1,0 +1,16 @@
+{
+  "name": "debuggingexpl",
+  "version": "1.0.0",
+  "description": "Пример отладки из [LogRocket блога об отладке веб-приложений](https://blog.logrocket.com/master-javascript-debugging-web-apps/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "kuklinv",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
