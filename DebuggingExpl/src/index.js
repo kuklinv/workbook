@@ -8,6 +8,8 @@ const currentElement = document.getElementById('current');
 const totalElement = document.getElementById('total');
 
 button.innerText = 'Click me';
+button.style.margin = '0 auto';
+button.style.display = 'block';
 
 button.addEventListener("click", () => {
     increment();

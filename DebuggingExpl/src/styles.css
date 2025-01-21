@@ -15,10 +15,26 @@ body {
     }
     .table {
         border-collapse: collapse;
-        width: 100%;
+        width: 60%;
         margin: 0 auto;
         text-align: center;
+        border: 1px solid grey;
+
     }
+    .table-row {
+        border: 1px solid black;
+    }
+    .table-cell {
+        border: 1px solid black;
+    }
+    /* .script_button {
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        position: relative;
+        border: 1px solid white;    
+        padding: 0 1rem;
+    } */
 /*    .table-body {
         border: 1px solid black;
         width: 100%;
@@ -30,27 +46,11 @@ body {
         padding: 10px;
         margin: 0 auto;
     }
-    .table-row {
-        border: 1px solid black;
-        width: 100%;
-        padding: 10px;
-        margin: 0 auto;
-        text-align: center;
+
     }
-    .table-cell {
-        border: 1px solid black;
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        margin: 0 auto;
+
+
     }
-    .script_button {
-        display: block;
-        margin: 0 auto;
-        padding: 10px;
-        margin: 0 auto;
-        align-items: center;
-        text-align: center;
-    }
+
         */
 }
