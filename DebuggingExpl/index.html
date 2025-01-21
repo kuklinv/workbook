@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,24 +7,27 @@
     <link rel="stylesheet" href="./src/styles.css"> 
 </head>
 <body>
-    <h1>Web Debug App</h1>
-    <p>Check console for bug</p>
-    <table>
+    <h1 class="title">Web Debug App</h1>
+    <p class="description">Check console for bug</p>
+    <table class="table">
         <thead>
-            <tr>
-                <th>Previous count</th>
-                <th>Current count</th>
-                <th>Total count</th>
+            <tr class="table-row">
+                <th class="table-header">Previous count</th>
+                <th class="table-header">Current count</th>
+                <th class="table-header">Total count</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="table-body">
             <tr>
-                <td id="previous">0</td>
-                <td id="current">0</td>
-                <td id="total">0</td>
+                <td id="previous" class="table-cell">0</td>
+                <td id="current" class="table-cell">0</td>
+                <td id="total" class="table-cell">0</td>
             </tr>
-    </table>
+        </tbody>
 
-    <script src="./dist/bundle.js" ></script> <!-- Include the bundled output -->
+           
+    </table>
+    <script src="./dist/bundle.js"></script> <!-- Include the bundled output -->
+ 
 </body>
 </html>
