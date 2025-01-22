@@ -1,5 +1,13 @@
 import { increment, getCount } from "./counter";
-import { updateCache } from "./counterCache";
+import { countCache } from "./counterCache";
+
+const span = document.createElement('span');
+document.body.appendChild(span);
+span.style.margin = '0 auto';
+span.style.display = 'block';
+span.style.width = '80%';
+span.style.height = '50px';
+
 
 const button = document.createElement('button');
 document.body.appendChild(button);
@@ -15,6 +23,6 @@ button.addEventListener("click", () => {
     increment();
     previousElement.innerText = countCache.previousCount;
     currentElement.innerText = countCache.currentCount;
-    totalElement.innerText = countCache.total();
+    totalElement.innerText = countCache.totalCount;
 });
 
