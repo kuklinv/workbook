@@ -1,3 +1,7 @@
+#h1 8 JavaScript debugging strategies for web apps
+
+#h2 Подготовка базового приложения
+
 Пример отладки из [LogRocket блога об отладке веб-приложений](https://blog.logrocket.com/master-javascript-debugging-web-apps/)
 
 дополнительные материалы по webpack: 
@@ -32,3 +36,9 @@ Now run npx webpack to bundle and minify your code.
 ```
 npx webpack
 ```
+1. Source maps
+
+update the webpack.config.js file as follows: The devtool: 'source-map' or devtool: 'eval-source-map' 
+Now run npx webpack
+
+
