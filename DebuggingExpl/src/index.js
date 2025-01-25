@@ -1,4 +1,4 @@
-import { increment, getCount } from "./counter";
+import { incrementCounter, getCount } from "./counter";
 import { countCache } from "./counterCache";
 
 const span = document.createElement('span');
@@ -20,7 +20,7 @@ button.style.margin = '0 auto';
 button.style.display = 'block';
 
 button.addEventListener("click", () => {
-    increment();
+    incrementCounter();
     previousElement.innerText = countCache.previousCount;
     currentElement.innerText = countCache.currentCount;
     totalElement.innerText = countCache.totalCount;
