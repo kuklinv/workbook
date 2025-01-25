@@ -7,6 +7,6 @@ export const countCache = {
 export function updateCache(currentCount, previousCount) {
     countCache.previousCount = previousCount;
     countCache.currentCount = currentCount;
-    countCache.totalCount += currentCount;
+    countCache.totalCount = (countCache.totalCount || 0) + currentCount;
 }
 
